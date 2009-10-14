@@ -1,6 +1,6 @@
 #summary Plain English Terms of Use
 
-*Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the !TownMe GeoAPI brought to you by Mixer Labs, Inc.*
+==Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the !TownMe GeoAPI brought to you by Mixer Labs, Inc.==
 
 We are launching this alpha GeoAPI for use by the broader developer community.  We decided to open this API because we built it for our own purposes to run "townme.com":http://www.townme.com/ and kept getting requests from friends who were interested in using the data to do cool/interesting/crazy things.  
 
@@ -12,14 +12,17 @@ Basically our GeoAPI license agreement says:
   * Use this API at your own risk!  The API is still in alpha.  We may also change the structure of this API at any time at our discretion.  If we make changes we will update these pages so you know what is going on.
   * The data in the API is our intellectual property or that of our partners who provided it to us.  It is not yours and we are not granting you any broad license to use this data outside of the use of the API.
   * We can change the terms of our API at anytime – it is up to you to come back here to make sure the terms haven’t changed on you. 
+  * Make to properly attribute TownMe for use of this API.
 
 We are also launching a “writable” portion of the API.  This API will let you write data for specific entities against the API.  The terms for the writable portion also include:
   * We believe in data portability – anything that you write against the API will be data we will let you extract easily (right now “easily” probably means you email us and we send you a CSV with your data – we still need to add a lot of features. :)
   * In order to help us improve the API as well as augment the set of locations available to the developer community via the API, data you write against the API is by default also licensed to us non-exclusively.  		
 
-The GeoAPI will initially be constrained to 5000 queries per day.  
+The GeoAPI will initially be constrained to 5000 queries per day.  If you need more then this feel free to email us at "api _at_ townme.com".
 
 If you have any questions about the GeoAPI pleacs contact "api _at_ townme.com"
+
+As an FYI "Mixer Labs, Inc." is the company we incorporated as when we were still in stealth mode, while TownMe is the site we work on.
 
 *Please be sure to read the full legal terms below, which you are bound by if you use the API.*
 
@@ -28,8 +31,8 @@ If you have any questions about the GeoAPI pleacs contact "api _at_ townme.com"
 This document governs the terms under which you may access and use the application programming interface that is made available on this website (the "API"), and the data transmitted through the API (the "Company Content"). This document incorporates the terms of the following additional documents, including all future amendments or modifications thereto (collectively, and together with this document, the "API Agreement"):
 
    * [Display_requirements Display Requirements]
-   * [http://www.townme.com/terms.html Townme.com Terms of Service]
-   * [http://www.townme.com/privacy.html Townme.com Privacy Policy]
+   * [http://www.townme.com/terms.html TownMe.com Terms of Service]
+   * [http://www.townme.com/privacy.html TownMe.com Privacy Policy]
 
 BY CHECKING “I AGREE” YOU AGREE TO USE THE API SOLELY IN ACCORDANCE WITH THE TERMS AND CONDITIONS OF THIS API AGREEMENT, AND YOU AGREE THAT YOU ARE BOUND BY AND ARE A PARTY TO THIS AGREEMENT.  YOU WARRANT THAT YOU ARE AT LEAST EIGHTEEN YEARS OLD AND THAT YOU HAVE THE LEGAL CAPACITY TO ENTER INTO CONTRACTS.  IF YOU ACCESS OR USE THE API OR COMPANY CONTENT ON BEHALF OF A COMPANY, PRINCIPAL OR OTHER ENTITY, YOU REPRESENT THAT YOU HAVE AUTHORITY TO BIND SUCH ENTITY AND ITS AFFILIATES TO THE API AGREEMENT AND THAT IT IS FULLY BINDING UPON THEM. IN SUCH CASE, THE TERM "YOU" WILL REFER TO SUCH ENTITY AND ITS AFFILIATES. IF YOU DO NOT HAVE AUTHORITY, OR IF YOU DO NOT AGREE WITH THE TERMS OF THE API AGREEMENT, YOU MAY NOT ACCESS OR USE THE API OR COMPANY CONTENT. YOU SHOULD READ AND KEEP A COPY OF EACH COMPONENT OF THE API AGREEMENT FOR YOUR RECORDS. IN THE EVENT OF A CONFLICT AMONG THEM, THE TERMS OF THIS DOCUMENT WILL CONTROL.
 
