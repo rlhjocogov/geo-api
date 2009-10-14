@@ -1,4 +1,4 @@
-#Overview of how to get started with the TownMe GeoAPI
+#summary Overview of how to get started with the TownMe GeoAPI
 
 To get started using the TownMe GeoAPI, you should make sure to understand the core concepts and read the documentation (I guess you're in the right place!). To play around with the API, you can either use your web browser or a command line http tool such as curl. You can also download our simple [http://code.google.com/p/geo-api/source/browse/#svn/trunk Python API client] (feel free to contribute a client in your favorite language!).
 
