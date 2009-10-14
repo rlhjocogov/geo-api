@@ -1,9 +1,10 @@
-#Requirements for Display of TownMe attribution for applications using the [http://code.google.com/p/geo-api/ TownMe GeoAPI].
+This page contains the Requirements for Display of TownMe Attribution for applications using the [http://code.google.com/p/geo-api/ TownMe GeoAPI].
 
 = Introduction =
 
-Add your content here.
+We think there are some really amazing applications that you will build through use of the TownMe API.  As part of this brave new world of apps we want to ensure there is consistency in how the data is displayed and used.   
 
+All your use of the API must follow these requirements, in addition to the [http://code.google.com/p/geo-api/wiki/TermsOfUse API Agreement].
 
 = Details =
 
