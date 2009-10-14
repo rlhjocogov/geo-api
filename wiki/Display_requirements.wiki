@@ -1,14 +1,38 @@
 This page contains the Requirements for Display of TownMe Attribution for applications using the [http://code.google.com/p/geo-api/ TownMe GeoAPI].
 
-= Introduction =
+===Introduction===
 
 We think there are some really amazing applications that you will build through use of the TownMe API.  As part of this brave new world of apps we want to ensure there is consistency in how the data is displayed and used.   
 
 All your use of the API must follow these requirements, in addition to the [http://code.google.com/p/geo-api/wiki/TermsOfUse API Agreement].
 
-= Details =
+===Display Requirements===
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * Feel free to (but you are not required to) email "api _at_ townme _dot_ com" before you launch anything.  We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
+  * When you display information from the TownMe API, you must display one of the TownMe logos so it is clear to the user that the data is from TownMe.
+
+=insert logo=
+
+  * Mobile sites may use one of the smaller images
+=insert logo=
+ 
+  * Do not modify these logos in any way.
+
+  * Link the logo to http://townme.com (once we have a mobile property we may ask mobile apps to link to there instead)
+
+  * If you are displaying detailed information about a point of interest or listing, you also need to use the link provided in the API response.  Please use either the short twn.me or townme.com URLs that are sent via -the API as part of this business listing.  If you like, you can write “More”, “Read more…” or “More about this location” or “more about this business” as anchor text for these listings
+
+  * We do not require or ask for any revenue share.  You can monetize these pages however you like.  
+
+===Things you are not allowed to do:===
+  * Don't cache or store information from the API, or make bulk requests. The API is for user-initiated, real time requests.
+
+  * Don't  use “nofollow” on your links to TownMe.  Links back to TownMe need to be followable. 
+
+  * Don't modify any of the information from the API (this also includes our logo/graphics).
+
+  * Don't violate the other terms of use described in the [http://code.google.com/p/geo-api/wiki/TermsOfUse GeoAPI Terms of Use].
+
+Questions?  Feel free to email us anytime at "api _at_ townme _dot_ com".
+
+ 
