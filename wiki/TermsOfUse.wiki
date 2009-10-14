@@ -1,4 +1,4 @@
-#Plain English Terms of Use
+#summary Plain English Terms of Use
 
 *Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the TownMe GeoAPI brought to you by Mixer Labs, Inc.*
 
