@@ -1,0 +1,19 @@
+#Overview of how to get started with the TownMe GeoAPI
+
+To get started using the TownMe GeoAPI, you should make sure to understand the core concepts and read the documentation (I guess you're in the right place!). To play around with the API, you can either use your web browser or a command line http tool such as curl. You can also download our simple [http://code.google.com/p/geo-api/source/browse/#svn/trunk Python API client] (feel free to contribute a client in your favorite language!).
+
+=API Keys=
+
+To use the TownMe API, you will need to get an [http://spreadsheets.google.com/viewform?formkey=dGJscE5kWmc1ZjVDUzFQUW8yMmdNa0E6MA API Key]. There is a testing/demo key that you can use ("demo"), but *please* remember to not use it in production. Everyone is tinkering with it, so you are very likely to get your app blocked due to rate limits.
+
+In our beta phase, we will be rolling out API keys progressively. If you would like to get an API Key, please fill out the form linked above and we'll get back to you as soon as possible.
+
+
+=Rate Limiting=
+
+Be nice. Don't hammer our servers unnecessarily. If your app is taking off like a rocketship, please let us know and we can work something out. By default, each API Key is limited to 5,000 queries per day. If you come within striking distance of that, please email us at "api [at] townme.com".
+
+
+=Terms of Use=
+
+We tried to keep the [[Terms of Use]] clear and reasonable. Please read them carefully. If you rely on us as an important piece of infrastructure, please make sure to understand what is OK and what isn't. If you're not clear on the terms, please email us at "api [at] townme.com".
