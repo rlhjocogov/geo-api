@@ -87,7 +87,7 @@ http://api.townme.com/v1/e/<guid>/parents
 
 *query*
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/parents?apikey=spicy-chicken&pretty=1
+http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/parents?apikey=demo&pretty=1
 }}}
 
 *response*
