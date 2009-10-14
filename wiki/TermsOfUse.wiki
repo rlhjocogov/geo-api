@@ -27,7 +27,7 @@ If you have any questions about the GeoAPI pleacs contact "api _at_ townme.com"
 
 This document governs the terms under which you may access and use the application programming interface that is made available on this website (the "API"), and the data transmitted through the API (the "Company Content"). This document incorporates the terms of the following additional documents, including all future amendments or modifications thereto (collectively, and together with this document, the "API Agreement"):
 
-   * Display Requirements [link]
+   * Display Requirements [Display Requirements]
    * Townme.com [http://www.townme.com/terms.html Terms of Service]
    * Townme.com [http://www.townme.com/privacy.html Privacy Policy]
 
