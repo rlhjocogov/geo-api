@@ -8,7 +8,7 @@
 http://api.townme.com/v1/e/<guid>/view/<view>
 }}}
 `<guid>: Any valid TownMe guid`
-`<view>: A valid TownMe view for the given guid. ([KeyConcepts#Views currently supported views])`
+`<view>: A valid TownMe view for the given guid.` ([KeyConcepts#Views currently supported views])
 
 ==Parameters==
 
