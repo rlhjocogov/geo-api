@@ -37,7 +37,7 @@ The currently supported list of views are:
   * data fields:
     * name: Business name
     * address: Business address
-  * uri: Canonical !TownMe uri
+  * canonical-url: Canonical !TownMe url
   * listing-url: Business url
   * hours: Hours of operation (array of tuples `[days, hours, type]`)
   * verticals: Business categories (array of canonical business types)
@@ -62,49 +62,49 @@ The currently supported list of views are:
 *example*
 {{{
 {
-  "hours": [
-    [
-      "Mon to Fri", 
-      "6:00am to 10:00pm", 
-      ""
+    "hours": [
+      [
+        "Mon to Fri", 
+        "6:00am to 10:00pm", 
+        ""
+      ], 
+      [
+        "Sat", 
+        "7:00am to 10:00pm", 
+        ""
+      ], 
+      [
+        "Sun", 
+        "7:00am to 9:00pm", 
+        ""
+      ]
     ], 
-    [
-      "Sat", 
-      "7:00am to 10:00pm", 
-      ""
+    "features": [
+      "Credit Card OK", 
+      "Price: Cheap"
     ], 
-    [
-      "Sun", 
-      "7:00am to 9:00pm", 
-      ""
-    ]
-  ], 
-  "features": [
-    "Credit Card OK", 
-    "Price: Cheap"
-  ], 
-  "chain": null, 
-  "address": "1026 Valencia St, San Francisco CA 94110", 
-  "uri": "/ritual-coffee-roasters-san-francisco-ca-94110", 
-  "verticals": [
-    "food-and-drink:coffee-houses", 
-    "restaurants"
-  ], 
-  "phone": "(415) 641-1024", 
-  "world-wide-rating": 4.0, 
-  "sips": [
-    "soy latte", 
-    "espresso", 
-    "hipsters", 
-    "blue bottle", 
-    "mission", 
-    "coffee shop", 
-    "baristas", 
-    "cappuccino", 
-    "outlets", 
-    "foam"
-  ], 
-  "listing-url": "http://www.ritualroasters.com", 
-  "name": "Ritual Coffee Roasters"
+    "chain": null, 
+    "address": "1026 Valencia St, San Francisco CA 94110", 
+    "canonical-url": "http://www.townme.com/ritual-coffee-roasters-san-francisco-ca-94110", 
+    "verticals": [
+      "food-and-drink:coffee-houses", 
+      "restaurants"
+    ], 
+    "phone": "(415) 641-1024", 
+    "world-wide-rating": 4.0, 
+    "sips": [
+      "soy latte", 
+      "espresso", 
+      "hipsters", 
+      "blue bottle", 
+      "mission", 
+      "coffee shop", 
+      "baristas", 
+      "cappuccino", 
+      "outlets", 
+      "foam"
+    ], 
+    "listing-url": "http://www.ritualroasters.com", 
+    "name": "Ritual Coffee Roasters"
 }
 }}}
