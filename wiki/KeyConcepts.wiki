@@ -37,7 +37,7 @@ The currently supported list of views are:
   * data fields:
     * name: Business name
     * address: Business address
-  * uri: Canonical TownMe uri
+  * uri: Canonical !TownMe uri
   * listing-url: Business url
   * hours: Hours of operation (array of tuples `[days, hours, type]`)
   * verticals: Business categories (array of canonical business types)
@@ -56,7 +56,7 @@ The currently supported list of views are:
     * Romantic
   * chain: business chain (ex. jamba-juice)
   * phone: Phone number (format is (xxx) xxx-xxxx)
-  * web-wide-rating: Aggregate web-wide TownMe rating (out of 5.0)
+  * web-wide-rating: Aggregate web-wide !TownMe rating (out of 5.0)
   * sips: Statistically Improbably Phrases (ex. "hipsters" for Ritual Roasters in San Francisco). These are phrases/words we think are unique/interesting for that business.
 
 *example*
