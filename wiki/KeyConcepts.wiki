@@ -7,11 +7,11 @@
 Entities are things in the world. Entities can be physical things (ex. a business, a statue or a park), as well as arbitrary demarcations (ex. a neighborhood or a school district). Each entity has:
   * name: entity name (ex. Ritual Roasters)
   * type: entity type (ex. listing). Currently supported types are listed below 
-  * geom: entity geometry as a valid geojson[1] object. Can be a single point (a statue) or a polygon (a park).
+  * geom: entity geometry as a valid geojson^(1)^ object. Can be a single point (a statue) or a polygon (a park).
   * guid: string that uniquely identifies an entity (ex. Ritual Roasters in San Francisco, CA has the ID ritual-coffee-roasters-san-francisco-ca-94110. This always means one thing, and is a permanent identifier of that business).
   * canonical url: pretty canonical url at townme.com.
 
-[1] [http://geojson.org/] - Note that geojson format represents coordinates as (longitude,latitude) -- a common source of confusion for people used to thinking in terms of (longitude,latitude)
+(1) [http://geojson.org/] - Note that geojson format represents coordinates as (longitude,latitude) -- a common source of confusion for people used to thinking in terms of (longitude,latitude)
 
 The currently supported list of entity types are:
 
