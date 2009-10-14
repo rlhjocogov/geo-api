@@ -16,7 +16,7 @@ http://api.townme.com/v1/search
   * *lat*: 
     * Required. 
     * Description: Latitude for search. 
-    * Format: positive or negative floating point number (ex. 37.75647)
+    * Format: Positive or negative floating point number (ex. 37.75647)
   * *lon*: 
     * Required. 
     * Longitude for search. 
@@ -24,7 +24,11 @@ http://api.townme.com/v1/search
   * *radius*: 
     * Optional. 
     * Description: Search radius. 
-    * Format: floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km.
+    * Format: Floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km.
+  * *limit*:
+    * Optional
+    * Description: Max number of results to return.
+    * Format: Positive integer. Default is 10 and maximum is 100.
 
 ==Example==
 
