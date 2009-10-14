@@ -35,6 +35,7 @@ BY CHECKING “I AGREE” YOU AGREE TO USE THE API SOLELY IN ACCORDANCE WITH THE
 
 1. GRANT OF LICENSE – 
 	A.	Subject to your full compliance with all of the terms and conditions of this API Agreement, Mixer Labs, Inc. ("Company") grants you a non-exclusive, revocable, nonsublicensable, nontransferable license to (i) access and use the API to receive the Company Content; (ii) display the Company Content on your website or internet-connected application for mobile devices ("Your Site"); and (iii) reproduce and display the Company name and logo (the "Company Marks") solely in order to comply with the Display Requirements d. You may not install or use the API for any other purpose without Company's prior written consent. No rights or licenses are granted except as expressly and unambiguously set forth herein.  This Agreement does not entitle you to any support for the API.
+
 	B.	The API may permit you to write location data against the API (such data “Licensee Content”).  Company does not claim ownership of your Licensee Content you submit or make available via the API.  However, you grant Company a non-exclusive, worldwide, royalty-free, perpetual, irrevocable, and fully sublicensable license to use, distribute, reproduce, modify, adapt, publish, translate, publicly perform and publicly display such Licensee Content (in whole or in part) and to incorporate such Licensee Content into other works in any format or medium now known or later developed.
 
 
