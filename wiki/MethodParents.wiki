@@ -12,10 +12,15 @@ http://api.townme.com/v1/parents
 
 ==Parameters==
 
-  * lat: Required. Latitude for search. Format: positive or negative floating point number (ex. 37.75647)
-  * lon: Required. Longitude for search. Format: positive or negative floating point number (ex. -122.421218)
-  * apikey: Required. Your API key.
-  * pretty: Optional. Prettify JSON results (easier to read). Format: set to '1' if you want prettified results.
+  * GlobalParameters
+  * *lat*: 
+    * Required. 
+    * Description: Latitude for search. 
+    * Format: Positive or negative floating point number (ex. 37.75647)
+  * *lon*: 
+    * Required. 
+    * Longitude for search. 
+    * Format: positive or negative floating point number (ex. -122.421218)
 
 ==Example==
 
@@ -80,8 +85,7 @@ http://api.townme.com/v1/e/<guid>/parents
 
 ==Parameters==
 
-  * apikey: Required. Your API key.
-  * pretty: Optional. Prettify JSON results (easier to read). Format: set to '1' if you want prettified results.
+  * GlobalParameters
 
 ==Example==
 
