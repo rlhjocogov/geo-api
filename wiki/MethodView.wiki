@@ -12,8 +12,7 @@ http://api.townme.com/v1/e/<guid>/view/<view>
 
 ==Parameters==
 
-  * apikey: Required. Your API key.
-  * pretty: Optional. Prettyfy JSON results (easier to read). Format: set to '1' if you want prettified results.
+  * GlobalParameters
 
 ==Example==
 
