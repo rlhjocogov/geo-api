@@ -45,17 +45,29 @@ BY CHECKING “I AGREE” YOU AGREE TO USE THE API SOLELY IN ACCORDANCE WITH THE
 You agree that you will not, and will not assist or enable others to:
 
 a)	cache, record, pre-fetch, or otherwise store any portion of the Company Content  or attempt or provide a means to execute any "bulk download" operations;
+
 b)	modify the Company Content, or use it to update or create your own database of business listing information; 
+
 c)	create or disclose metrics about, or perform any statistical analysis of, the API or Company Content; 
+
 d)	use the API on behalf of any third party;
+
 e)	display Company Marks or Company Content in a manner that could reasonably imply an endorsement, relationship or affiliation with or sponsorship between you or a third party and Company, other than your permitted use of the API under the terms of the API Agreement; 
+
 f)	copy, rent, lease, sell, transfer, assign, sublicense, dissemble, reverse engineer or decompile (except to the limited extent expressly authorized under applicable statutory law), modify or alter any part of the API; 
+
 g)	use the API in a manner that impacts the stability of Company's servers or impacts the behavior of other applications using the API;
+
 h)	display the Company Content on any site that disparages Company or its products or services, or infringes any Company intellectual property or other rights;
+
 i)	attempt to cloak or conceal your identity or your application's identity when requesting authorization to use the Company  API;
+
 j)	make requests against the API that are not user initiated;
+
 k)	use the API or Company Content in any manner or for any purpose that may violate any law or regulation, or any right of any person including, but not limited to, intellectual property rights, rights of privacy and/or rights of personality, or which otherwise may be harmful (in Company's sole discretion) to Company, its providers, its suppliers, end users of this website, or your end users; 
+
 l)	use the API, Company Content or Company Marks in a manner that could reasonably be interpreted to suggest that Company is the author or entity that is responsible, in whole or in part, for the creation or development of any Company Content or that such Company Content represents the views of Company; 
+
 m)	use the APIs in connection with or to promote any products, services, or materials that constitute, promote or are used primarily for the purpose of dealing in: spyware, adware, or other malicious programs or code, counterfeit goods, items subject to U.S. embargo, unsolicited mass distribution of email ("spam"), multi-level marketing proposals, hate materials, hacking/surveillance/interception/descrambling equipment, libelous, defamatory, obscene, pornographic, abusive or otherwise offensive content, prostitution, body parts and bodily fluids, stolen products and items used for theft, fireworks, explosives, and hazardous materials, government IDs, police items, gambling, professional services regulated by state licensing regimes, non-transferable items such as airline tickets or event tickets, weapons and accessories; or any subject matter prohibited by Agreement.
 
 
@@ -78,45 +90,3 @@ m)	use the APIs in connection with or to promote any products, services, or mate
 
 12. MISCELLANEOUS - This Agreement constitutes the entire agreement between you and Company pertaining to the subject matter hereof, and supersedes any and all written or oral agreements with respect to such subject matter. This Agreement, and any disputes arising from or relating to the interpretation thereof, shall be governed by and construed under California law as such law applies to agreements between California residents entered into and to be performed within California by two residents thereof and without reference to its conflict of laws principles or the United Nations Conventions for the International Sale of Goods. Any action or proceeding arising from or relating to this Agreement must be brought in the state or federal courts of Santa Clara County, California, and each party irrevocably submits to the jurisdiction and venue of any such court in any such action or proceeding. The prevailing party in any action arising out of this Agreement shall be entitled to an award of its costs and attorneys' fees. If any provision of this Agreement is held to be unenforceable for any reason, such provision shall be reformed only to the extent necessary to make it enforceable. The failure of Company to act with respect to a breach of this Agreement by you or others does not constitute a waiver and shall not limit Company's rights with respect to such breach or any subsequent breaches. This Agreement is personal to you and may not be assigned or transferred for any reason whatsoever (including, without limitation, by operation of law, merger, reorganization, or as a result of an acquisition or change of control involving you) without Company's prior written consent and any action or conduct in violation of the foregoing shall be void and without effect. Company expressly reserves the right to assign this Agreement and to delegate any of its obligations hereunder. 
 
-
-
-
-
-
-
-Display Requirements [separate linked document]
-We think there are some really amazing applications that you will build through use of the TownMe API.  As part of this brave new world of apps we want to ensure there is consistency in how the data is displayed and used.   
-All your use of the API must follow these requirements, in addition to the API Agreement and TownMe Terms of Use [LINKKKKKKKK]
-
-Display requirements:
-•	Feel free to (but you are not required to) email api@townme.com before you launch anything.  We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
-•	When you display information from the TownMe API, you must display one of the TownMe logos so it is clear to the user that the data is from TownMe.
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-•	Mobile sites may use one of the smaller images
- 
- 
-•	Do not modify these logos in any way.
-•	Link the logo to http://townme.com (once we have a mobile property we may ask mobile apps to link to there instead)
-•	If you are displaying detailed information about a point of interest or listing, you also need to use the link provided in the API response.  Please use either the short twn.me or townme.com URLs that are sent via -the API as part of this business listing.  If you like, you can write “More”, “Read more…” or “More about this location” or “more about this business” as anchor text for these listings
-•	We do not require or ask for any revenue share.  You can monetize these pages however you like.  
-
-Things you are not allowed to do:
-•	Don't cache or store information from the API, or make bulk requests. The API is for user-initiated, real time requests.
-•	Don't  use “nofollow” on your links to TownMe.  All links back to TownMe should be followable. 
-•	Don't modify any of the information from the API (this also includes our logo/graphics).
-•	Don't violate the other terms of use described in the  GeoAPI Terms of Use.  [link]
-Questions?  Feel free to email us anytime at api@townme.com
-
- 
