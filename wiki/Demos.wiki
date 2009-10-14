@@ -1,6 +1,6 @@
 #summary Various Simple Demos to Illustrate the use the the TownMe GeoAPI
 
-To show off some of the cool stuff that can be done with the TownMe GeoAPI, we have pulled together a few quick demos.  These demos were pulled together very fast (i.e. a day or work or less for each, so full disclaimers apply).
+To show off some of the cool stuff that can be done with the !TownMe GeoAPI, we have pulled together a few quick demos.  These demos were pulled together very fast (i.e. a day or work or less for each, so full disclaimers apply).
 
 =Demo 1: Location Check Ins=
 
