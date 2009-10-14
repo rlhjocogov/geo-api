@@ -1,5 +1,14 @@
 #summary List of query parameters that work across all queries
 
-  * *apikey*: Required. Your API key.
-  * *pretty*: Optional. Prettify JSON results (easier to read). Format: set to '1' if you want prettified results.
-  * *jsoncallback*: Optional. Return response in [http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/ JSONP] format. Also, check out JQuery has nice [http://docs.jquery.com/Ajax/jQuery.getJSON support for JSONP callbacks]. Format: set to '1' if you want a response in JSONP format.
+  * *apikey*: 
+    * Required. 
+    * Description: Your API key.
+    * Format: string
+  * *pretty*:
+    * Optional. 
+    * Description: Prettify JSON results (easier to read). 
+    * Format: set to '1' if you want prettified results.
+  * *jsoncallback*: 
+    * Optional. 
+    * Description: Return response in [http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/ JSONP] format. Also, check out JQuery has nice [http://docs.jquery.com/Ajax/jQuery.getJSON support for JSONP callbacks]. 
+    * Format: set to '1' if you want a response in JSONP format.
