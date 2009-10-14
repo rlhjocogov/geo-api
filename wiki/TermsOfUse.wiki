@@ -44,7 +44,7 @@ BY CHECKING “I AGREE” YOU AGREE TO USE THE API SOLELY IN ACCORDANCE WITH THE
 3. LICENSE RESTRICTIONS – 
 You agree that you will not, and will not assist or enable others to:
 
-a)	cache, record, pre-fetch, or otherwise store any portion of the Company Content  or attempt or provide a means to execute any "bulk download" operations;
+   a)	cache, record, pre-fetch, or otherwise store any portion of the Company Content  or attempt or provide a means to execute any "bulk download" operations;
 
 b)	modify the Company Content, or use it to update or create your own database of business listing information; 
 
