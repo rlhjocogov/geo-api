@@ -15,11 +15,11 @@ http://api.townme.com/v1/search
   * GlobalParameters
   * *lat*: 
     * Required. 
-    * Description: Latitude for search. 
+    * Description: Decimal latitude for search. 
     * Format: Positive or negative floating point number (ex. 37.75647)
   * *lon*: 
     * Required. 
-    * Longitude for search. 
+    * Description: Decimal longitude for search. 
     * Format: positive or negative floating point number (ex. -122.421218)
   * *radius*: 
     * Optional. 
