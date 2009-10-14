@@ -17,3 +17,5 @@ If you see any errors, or have suggestions for good data sources to use, please 
 
 = Additional Sources =
 There are a number of data sets we paid for or which otherwise do not make sense for us to attribute here.  
+
+If you see any errors, or have suggestions for good data sources to use, please contact us at "api _at_ townme _dot_ com"
