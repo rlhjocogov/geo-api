@@ -1,6 +1,6 @@
 #summary Search Method
 
-=search [root method]=
+=search=
 
 Method to search for entities around a specific point.
 
