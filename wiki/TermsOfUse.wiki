@@ -19,6 +19,6 @@ We are also launching a “writable” portion of the API.  This API will let yo
 
 The GeoAPI will initially be constrained to 5000 queries per day.  
 
-If you have any questions about the GeoAPI pleacs contact "api [at] townme.com"
+If you have any questions about the GeoAPI pleacs contact "api _at_ townme.com"
 
 *Please be sure to read the [FullTOU full legal terms], which you are bound by if you use the API.*
