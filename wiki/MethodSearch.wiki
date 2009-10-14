@@ -29,6 +29,10 @@ http://api.townme.com/v1/search
     * Optional.
     * Description: Entity type constraint. 
     * Format: String. If you only want points of interest, set to 'POI'
+  * *include-parents*:
+    * Optional.
+    * Description: Whether to include the parents of the returned entities.
+    * Format: set to '1' if you want to include parents.
   * *limit*:
     * Optional.
     * Description: Max number of results to return.
