@@ -22,7 +22,7 @@ http://api.townme.com/v1/search
 
 *query* 
 {{{
-http://api.townme.com/v1/search?lat=37.75647&lon=-122.421218&radius=0.1km&apikey=spicy-chicken&pretty=1
+http://api.townme.com/v1/search?lat=37.75647&lon=-122.421218&radius=0.1km&apikey=demo&pretty=1
 }}}
 
 *response*
