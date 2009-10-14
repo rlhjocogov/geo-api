@@ -11,9 +11,9 @@ In our beta phase, we will be rolling out API keys progressively. If you would l
 
 =Rate Limiting=
 
-Be nice. Don't hammer our servers unnecessarily. If your app is taking off like a rocketship, please let us know and we can work something out. By default, each API Key is limited to 5,000 queries per day. If you come within striking distance of that, please email us at "api [at] townme.com".
+Be nice. Don't hammer our servers unnecessarily. If your app is taking off like a rocketship, please let us know and we can work something out. By default, each API Key is limited to 5,000 queries per day. If you come within striking distance of that, please email us at "api <at> townme.com".
 
 
 =Terms of Use=
 
-We tried to keep the [[Terms of Use]] clear and reasonable. Please read them carefully. If you rely on us as an important piece of infrastructure, please make sure to understand what is OK and what isn't. If you're not clear on the terms, please email us at "api [at] townme.com".
+We tried to keep the [TermsOfUse Terms of Use] clear and reasonable. Please read them carefully. If you rely on us as an important piece of infrastructure, please make sure to understand what is OK and what isn't. If you're not clear on the terms, please email us at "api <at> townme.com".
