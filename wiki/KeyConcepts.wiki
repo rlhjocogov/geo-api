@@ -1,0 +1,110 @@
+#summary Key concepts behind the TownMe GeoAPI: Entities and Views
+
+*The TownMe GeoAPI exposes data in two ways: entities and views*
+
+=Entities=
+
+Entities are things in the world. Entities can be physical things (ex. a business, a statue or a park), as well as arbitrary demarcations (ex. a neighborhood or a school district). Each entity has:
+  * name: entity name (ex. Ritual Roasters)
+  * type: entity type (ex. listing). Currently supported types are listed below 
+  * geom: entity geometry as a valid geojson[1] object. Can be a single point (a statue) or a polygon (a park).
+  * guid: string that uniquely identifies an entity (ex. Ritual Roasters in San Francisco, CA has the ID ritual-coffee-roasters-san-francisco-ca-94110. This always means one thing, and is a permanent identifier of that business).
+  * canonical url: pretty canonical url at townme.com.
+
+[1] [http://geojson.org/] - Note that geojson format represents coordinates as (longitude,latitude) -- a common source of confusion for people used to thinking in terms of (longitude,latitude)
+
+The currently supported list of entity types are:
+
+|| city || over 20K US cities ||
+||neighborhood || US neighborhoods ||
+|| business || 16+ million US businesses ||
+|| POI || various points of interest such as the Golden Gate Bridge ||
+
+
+=Views=
+
+Views are collections of data about entities. The view data associated with a specific entity can be a blob containing arbitrary data. The data within a single view should follow a consistent format (most frequently a JSON-formatted string with a predefined list of attributes). 
+
+For a limited set of developers, we are offering the ability to have a custom writable view that allows you to associate data with entities. If you are interested in gaining access to a writable view, please [http://spreadsheets.google.com/viewform?formkey=dGJscE5kWmc1ZjVDUzFQUW8yMmdNa0E6MA submit your information] and we'll try to accommodate your request.
+
+The currently supported list of views are:
+
+=listing=
+
+  * entity types: business
+  * description: normalized business detail information
+  * data format: JSON
+  * data fields:
+    * name: Business name
+    * address: Business address
+  * uri: Canonical TownMe uri
+  * listing-url: Business url
+  * hours: Hours of operation (array of tuples [<days>, <hours>, <type>])
+  * verticals: Business categories (array of canonical business types)
+  * features: Business features - possible values are:
+    * Alcohol
+    * Credit Card OK
+    * Delivery
+    * Noise: Quiet
+    * Noise: Loud
+    * Open Late
+    * Outdoor Seating
+    * Parking
+    * Price: Cheap
+    * Price: Moderate
+    * Price: Expensive
+    * Romantic
+  * chain: business chain (ex. jamba-juice)
+  * phone: Phone number (format is (xxx) xxx-xxxx)
+  * web-wide-rating: Aggregate web-wide TownMe rating (out of 5.0)
+  * sips: Statistically Improbably Phrases (ex. "hipsters" for Ritual Roasters in San Francisco). These are phrases/words we think are unique/interesting for that business.
+
+*example*
+{{{
+{
+  "hours": [
+    [
+      "Mon to Fri", 
+      "6:00am to 10:00pm", 
+      ""
+    ], 
+    [
+      "Sat", 
+      "7:00am to 10:00pm", 
+      ""
+    ], 
+    [
+      "Sun", 
+      "7:00am to 9:00pm", 
+      ""
+    ]
+  ], 
+  "features": [
+    "Credit Card OK", 
+    "Price: Cheap"
+  ], 
+  "chain": null, 
+  "address": "1026 Valencia St, San Francisco CA 94110", 
+  "uri": "/ritual-coffee-roasters-san-francisco-ca-94110", 
+  "verticals": [
+    "food-and-drink:coffee-houses", 
+    "restaurants"
+  ], 
+  "phone": "(415) 641-1024", 
+  "world-wide-rating": 4.0, 
+  "sips": [
+    "soy latte", 
+    "espresso", 
+    "hipsters", 
+    "blue bottle", 
+    "mission", 
+    "coffee shop", 
+    "baristas", 
+    "cappuccino", 
+    "outlets", 
+    "foam"
+  ], 
+  "listing-url": "http://www.ritualroasters.com", 
+  "name": "Ritual Coffee Roasters"
+}
+}}}
