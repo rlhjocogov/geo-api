@@ -39,7 +39,7 @@ The currently supported list of views are:
     * address: Business address
   * uri: Canonical TownMe uri
   * listing-url: Business url
-  * hours: Hours of operation (array of tuples [<days>, <hours>, <type>])
+  * hours: Hours of operation (array of tuples [days, hours, type])
   * verticals: Business categories (array of canonical business types)
   * features: Business features - possible values are:
     * Alcohol
