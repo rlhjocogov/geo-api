@@ -1,0 +1,109 @@
+#summary Search Method
+
+=search [root method]=
+
+Method to search for entities around a specific point.
+
+==URL==
+
+{{{
+http://api.townme.com/v1/search
+}}}
+
+==Parameters==
+
+  * lat: Required. Latitude for search. Format: positive or negative floating point number (ex. 37.75647)
+  * lon: Required. Longitude for search. Format: positive or negative floating point number (ex. -122.421218)
+  * radius: Optional. Search radius. Format: floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km.
+  * apikey: Required. Your API key.
+  * pretty: Optional. Prettify JSON results (easier to read). Format: set to '1' if you want prettified results.
+
+==Example==
+
+*query* 
+{{{
+http://api.townme.com/v1/search?lat=37.75647&lon=-122.421218&radius=0.1km&apikey=spicy-chicken&pretty=1
+}}}
+
+*response*
+{{{
+{
+  "query": {
+    "params": {
+      "lon": -122.421218, 
+      "num-results": 10, 
+      "lat": 37.75647, 
+      "radius-in-meters": 100, 
+      "type": "any", 
+      "include-parents": false
+    }, 
+    "type": "search"
+  }, 
+  "result": [
+    {
+      "distance-in-meters": 0, 
+      "guid": "ritual-coffee-roasters-san-francisco-ca-94110", 
+      "meta": {
+        "geom": {
+          "type": "Point", 
+          "coordinates": [
+            -122.421218, 
+            37.75647
+          ]
+        }, 
+        "guid": "ritual-coffee-roasters-san-francisco-ca-94110", 
+        "type": "business", 
+        "name": "Ritual Coffee Roasters", 
+        "views": [
+          "listing"
+        ]
+      }
+    }, 
+    {
+      "distance-in-meters": 7, 
+      "guid": "nor-cal-refrigeration-san-francisco-ca-94110", 
+      "meta": {
+        "geom": {
+          "type": "Point", 
+          "coordinates": [
+            -122.421211, 
+            37.756405999999998
+          ]
+        }, 
+        "guid": "nor-cal-refrigeration-san-francisco-ca-94110", 
+        "type": "business", 
+        "name": "Nor Cal Refrigeration", 
+        "views": [
+          "listing"
+        ]
+      }
+    }, 
+   ...
+  ]
+}
+}}}
+
+==Usage Notes==
+
+  * results are sorted by distance relative to the specified lat/lon
+  * a maximum of 100 results will be returned
+  * the maximum radius is 1km - anything above that will be treated as 1km
+
+==Supported distance units==
+
+|| unit || abbreviation ||
+|| foot || ft ||
+|| kilometer || km ||
+|| meter || m ||
+|| mile || mi ||
+|| yard || yd ||
+
+__below are some other distance we units we support for fun. No guarantees about them working long-term, but figured we'd try to make pirates, Brits, Indians, astronomers, statisticians and MIT students feel at home :).__
+
+|| unit || abbreviation ||
+|| British foot || british_ft ||
+|| Indian yard || indian_yd ||
+|| Nautical Mile || nm ||
+|| US survey foot || survey_ft ||
+|| Attoparsecs || attoparsec ||
+|| Smoot || smoot ||
