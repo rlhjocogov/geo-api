@@ -1,0 +1,103 @@
+#summary View Method
+
+=view=
+
+==URL==
+
+{{{
+http://api.townme.com/v1/e/<guid>/view/<view>
+}}}
+`<guid>: Any valid TownMe guid`
+`<view>: A valid TownMe view for the given guid. ([KeyConcepts#Views currently supported views])`
+
+==Parameters==
+
+  * apikey: Required. Your API key.
+  * pretty: Optional. Prettyfy JSON results (easier to read). Format: set to '1' if you want prettified results.
+
+==Example==
+
+*query*
+{{{
+http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1
+}}}
+
+*response*
+{{{
+{
+  "query": {
+    "params": {
+      "guid": "ritual-coffee-roasters-san-francisco-ca-94110", 
+      "view": "listing"
+    }, 
+    "type": "entity-view"
+  }, 
+  "result": {
+    "hours": [
+      [
+        "Mon to Fri", 
+        "6:00am to 10:00pm", 
+        ""
+      ], 
+      [
+        "Sat", 
+        "7:00am to 10:00pm", 
+        ""
+      ], 
+      [
+        "Sun", 
+        "7:00am to 9:00pm", 
+        ""
+      ]
+    ], 
+    "features": [
+      "Credit Card OK", 
+      "Price: Cheap"
+    ], 
+    "chain": null, 
+    "address": "1026 Valencia St, San Francisco CA 94110", 
+    "canonical-url": "http://www.townme.com/ritual-coffee-roasters-san-francisco-ca-94110", 
+    "verticals": [
+      "food-and-drink:coffee-houses", 
+      "restaurants"
+    ], 
+    "phone": "(415) 641-1024", 
+    "world-wide-rating": 4.0, 
+    "sips": [
+      "soy latte", 
+      "espresso", 
+      "hipsters", 
+      "blue bottle", 
+      "mission", 
+      "coffee shop", 
+      "baristas", 
+      "cappuccino", 
+      "outlets", 
+      "foam"
+    ], 
+    "listing-url": "http://www.ritualroasters.com", 
+    "name": "Ritual Coffee Roasters"
+  }
+}
+}}}
+
+==Usage Notes==
+
+  * Response formats are view-specific. In most cases, these will be JSON-formatted strings.
+  * A guid/view combination that does not exist will return a 404
+
+=Writing to a custom-writeable view=
+
+If you have access to a custom-writeable view, you can write to it simply by POST'ing information to the view of any entity. For example, if you have a custom view called 'monsters-in-town' and you want to associate information about a monster in Ritual Roasters, you would POST to
+{{{
+http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/monsters-in-town?apikey=demo
+}}}
+ with some data - for example:
+{{{
+{monsters: [
+	{name: 'Zombie Fixie Rider',
+	 creator: 'hipsternaut'
+	 eats: ['nerds']
+	}]
+}
+}}}
