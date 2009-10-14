@@ -12,11 +12,19 @@ http://api.townme.com/v1/search
 
 ==Parameters==
 
-  * lat: Required. Latitude for search. Format: positive or negative floating point number (ex. 37.75647)
-  * lon: Required. Longitude for search. Format: positive or negative floating point number (ex. -122.421218)
-  * radius: Optional. Search radius. Format: floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km.
-  * apikey: Required. Your API key.
-  * pretty: Optional. Prettify JSON results (easier to read). Format: set to '1' if you want prettified results.
+  * GlobalParameters
+  * *lat*: 
+    * Required. 
+    * Description: Latitude for search. 
+    * Format: positive or negative floating point number (ex. 37.75647)
+  * *lon*: 
+    * Required. 
+    * Longitude for search. 
+    * Format: positive or negative floating point number (ex. -122.421218)
+  * *radius*: 
+    * Optional. 
+    * Description: Search radius. 
+    * Format: floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km.
 
 ==Example==
 
