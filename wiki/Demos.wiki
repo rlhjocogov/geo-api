@@ -1,0 +1,31 @@
+#summary Various Simple Demos to Illustrate the use the the TownMe GeoAPI
+
+To show off some of the cool stuff that can be done with the TownMe GeoAPI, we have pulled together a few quick demos.  These demos were pulled together very fast (i.e. a day or work or less for each, so full disclaimers apply).
+
+=Demo 1: Location Check Ins=
+
+A number of social location broadcast apps have launched in the last year.  The GeoAPI makes it easy to build a similar application.  In
+this demo, you can chose a lat/long on a map by clicking on the map (or, similarly, an iphone or android device can pass a lat/long in a related fashion).  In reply to the coordinates the API returns a set of businesses which a user can click on to "check in" and then annotate with a comment.  These comments get published into the writable part of the API which is then accessed by the user to see
+what comments people posted in the area while checking in.
+
+This means anyone can now much more easily write either (a) a location broadcast app or (b) an augmented reality app, where e.g. a pot of gold could be stored by a user at Starbucks, and this location annotation could be stored as a layer in our system via the API.
+
+=Demo 2: Annotation of Twitter Streams with Locations=
+
+Twitter recently launched a simple API which allows lat/longs to be appended at tweets.  The coordinates of these tweets are not converted
+into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  In this demo, we take a live stream of tweets and do location lookups based on the associated coordinates.  We then annotate these locations in real time and display the result.  So you can see that someone tweeted from "Dolores Park / Mission District / San Francisco" instead of "37.7600, -122.4270".  This is a cool way to get "real location" context for real time information.
+
+This could be a great add on for any Twitter client or other location focused application.
+
+=Demo 3: Greasemonkey Script for Twitter=
+
+_Shout out to Zboogs!_
+To play with this demo, install Greasemonkey and then install the [http://code.google.com/p/geo-api/source/browse/#svn/trunk twitter-local] script.
+
+ *Part 1: Convert Place Names Into Canonical Locations*
+We think it would be cool for there to be a "bit.ly for locations" or "hash tags for locations".  To this end we wrote a greasemonkey script that converts "::POI-name" into a linked URL for a point of interest near to where the user is.  We demo this as a Greasemonkey script for Twitter with the assumption that you, the user, are close to Ritual Roaster in San Francisco.  i.e. if you write "::ritual" or "::other-place-near-ritual" we will automatically convert "::ritual" to a link for "ritual roasters" and will take "::other-place-near-ritual" and resolve it to whatever likely business or point of interest that is.
+
+This could be a really great layer for any Twitter client app to add.
+
+*Part 2: Convert Coordinates into Points of Interest*
+The Greasemonkey script converts a lat/longs on Twitter to "real location".  So the coordinates "37.7600, -122.4270" get converted to "Dolores Park / Mission District / San Francisco".  The cool thing about this is if you are running greasemonkey you can actually see this location annotation occur in real time to your Twitter stream.  So this is a way for any Twitter user to see where all the people they are following are tweeting from.
