@@ -20,7 +20,7 @@ All your use of the API must follow these requirements, in addition to the [http
 
   * Link the logo to http://townme.com (once we have a mobile property we may ask mobile apps to link to there instead)
 
-  * If you are displaying detailed information about a point of interest or listing, you also need to use the link provided in the API response.  Please use either the short twn.me or townme.com URLs that are sent via -the API as part of this business listing.  If you like, you can write “More”, “Read more…” or “More about this location” or “more about this business” as anchor text for these listings
+  * If you are displaying detailed information about a point of interest or listing, you also need to use the link provided in the API response.  Please use the townme.com URLs that are sent via -the API as part of this business listing.  If you like, you can write “More”, “Read more…” or “More about this location” or “more about this business” as anchor text for these listings
 
   * We do not require or ask for any revenue share.  You can monetize these pages however you like.  
 
