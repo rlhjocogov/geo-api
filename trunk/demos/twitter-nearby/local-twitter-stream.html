@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Your Website</title>
+		<link rel="stylesheet" type="text/css" href="http://www.townme.com/static/css/main.css?cTLU1QHkSzds" />
+		<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript"
+	    src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAF3jp1TaPgs4YiYiCxtYmCRQUY8GGjQTBSIWRc-2b9bWN8H8O6hSA3dDAU9uTJ2zZiBCEIIio-AQUXw"></script>
+	</head>
+
+	<body onload="init()" onunload="GUnload()">
+    <script>
+
+      function init() {
+        // If browser supports geolocation (iPhone or Gears), use that,
+        // otherwise show a map
+        if (navigator.geolocation) {
+          get_geolocation()
+        } else {
+          init_map()
+        }
+        // Kick off the twitter search loop
+  	    search_twtr();
+      }
+    
+      function get_geolocation() {
+        $("#gelocationhint").show()
+        navigator.geolocation.getCurrentPosition(function(position){
+          $("#gelocationhint").hide()
+          $("#loadwait").show()
+          lat = position.coords.latitude
+          lon = position.coords.longitude
+          });
+      }
+  
+    
+    function init_map() {
+      $("#mapselect").show()
+      if (GBrowserIsCompatible()) {
+      	_map = new GMap2(document.getElementById("map_canvas"));
+      	_map.setCenter(new GLatLng(37.75647, -122.421218), 13);
+      	GEvent.addListener(_map, "click", map_click);
+      }
+    }
+
+    function map_click(overlay,latlng) {
+      if (latlng) {
+        $("#loadwait").show()
+  	    lat = latlng.lat();
+  	    lon = latlng.lng();
+      }
+    }
+    
+    // API cache to avoid duplicating requests on a single page load.
+    var api_cache = {}
+
+    // Simple wrapper around search query
+    function townme_location_search(lat, lon, type, radius, include_parents, 
+                                    limit, name_re, match_fn) {
+        // Build the search query
+        var server = 'http://api.townme.com/v1'
+        var url = server + '/search?apikey=demo&jsoncallback=?'
+        url += '&lat=' + lat // lat/lon to search from
+        url += '&lon=' + lon
+        if (include_parents) { // whether to include parents of entities in result (ex. 1)
+            url += '&include-parents=1'
+        }
+        if (type) { // type constraint (ex. POI)
+            url += '&type=' + type
+        }
+        if (radius) { // search radius (ex. 1km)
+            url += '&radius=' + radius
+        }
+        if (limit) { // number of results to return (ex. 20)
+            url += '&limit=' + limit
+        }
+        var callspec = {name_re:name_re, callback_fn: match_fn}
+        if (api_cache[url]) { // If the same query has already been requested
+            api_cache[url].callbacks.push(callspec)
+            if (api_cache[url].response) { // If the query has already returned a response
+                process_result(callspec.name_re, callspec.callback_fn, 
+                               api_cache[url].response)
+            }
+        } else { // If it's the first time the query is requested, actually make the call
+            api_cache[url] = {callbacks: [callspec]}
+            $.getJSON(url, function(resp) {
+              var my_callbacks = api_cache[url].callbacks
+              api_cache[url].response = resp
+              for (var j = 0; j < my_callbacks.length; j++) {
+                var callspec = my_callbacks[j] 
+                process_result(callspec.name_re, callspec.callback_fn, resp)
+              }
+            })
+        }
+    }
+
+    function process_result(name_re, callback_fn, resp) {
+        if (!resp.result) {
+            return
+        }
+        // Naively take the first matching result
+        for (var i = 0; i < resp.result.length; i++) {
+            var result = resp.result[i]
+            if (result.meta.name.match(name_re)) {
+                callback_fn(result)
+                return
+            }
+        }
+    }
+    
+    var lat=null
+    var lon=null
+    var seen_ids={}
+    var lat_lon_re=/(-?\d+\.\d+),(-?\d+\.\d+)/
+    
+    function search_twtr() {
+      // If lat/lon have not been set, do nothing
+      if (lat && lon) {
+        $("#loadwait").hide()
+        $("#tweetlist").show()
+        $("#latlon").text('(' + lat + ',' + lon + ')')
+        var url = "http://api.townme.com/v1/twitter?jsoncallback=?"
+        url += "&lat=" + lat + "&lon=" + lon
+        $.getJSON(url, function(data) { // Get tweets
+          $.each(data.results, function(num) {
+            var tweet = data.results[num]
+            if (!seen_ids[tweet.id]) {
+              seen_ids[tweet.id] = true
+              var match=lat_lon_re.exec(tweet.location)
+              if (match) {
+                townme_location_search(match[1], match[2], 'POI', '2km', true, 1, new RegExp('.*'), 
+                  function(result){
+                    var line = "<div style='border:#f6f6f6 2px solid;'><div>@" + tweet.from_user + ": "
+                    line += tweet.text + '</div>'
+                    line += "<div style='color:red'>"
+                    line += result['distance-in-meters'] + " meters from "
+                    line += result.meta.name
+                    if (result.parents) {
+                        for (var i=0; i < result.parents.length; i=i+1) {
+                            line += ' > ' + result.parents[i].name;
+                        }
+                    }
+                    line += "</div></div>"
+                    $("#tweet_stream").prepend(line)
+                  })
+              }
+            }
+          })
+        })
+      }
+      setTimeout(search_twtr, 5000);
+    }
+	  </script>
+	  <div style="padding:20px;">
+	  <div id="gelocationhint" style="display:none">
+	    <h3>Let your browser share your lat/lon to see tweets nearby</h3>
+	  </div>
+	  <div id="mapselect" style="display:none">
+	    <h3>Click on a point on the map to start!</h3>
+	    <div id="map_canvas" style="width: 500px; height: 300px"></div>
+	  </div>
+	  <div id="loadwait" style="display:none">
+      <h3>Loading...</h3>
+	  </div>
+	  <div id="tweetlist" style="display:none">
+  	  <h3>Tweets within five miles of <span id="latlon"></span></h3>
+  	  <div id="tweet_stream">
+  	  </div>
+  	</div>
+  	</div>
+	</body>
+
+</html>
