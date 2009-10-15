@@ -4,14 +4,16 @@ To show off some of the cool stuff that can be done with the !TownMe GeoAPI, we 
 
 =Demo 1: Location Check Ins=
 
-A number of social location broadcast apps have launched in the last year.  The GeoAPI makes it easy to build a similar application.  In
-this demo, you can chose a lat/long on a map by clicking on the map (or, similarly, an iphone or android device can pass a lat/long in a related fashion).  In reply to the coordinates the API returns a set of businesses which a user can click on to "check in" and then annotate with a comment.  These comments get published into the writable part of the API which is then accessed by the user to see
+A number of social location broadcast apps have launched in the last year.  The GeoAPI makes it easy to build a similar application.  In this demo, you can chose a lat/long on a map by clicking on the map (or, similarly, an iphone or android device can pass a lat/long in a related fashion).  In reply to the coordinates the API returns a set of businesses which a user can click on to "check in" and then annotate with a comment.  These comments get published into the writable part of the API which is then accessed by the user to see
 what comments people posted in the area while checking in.
 
 This means anyone can now much more easily write either (a) a location broadcast app or (b) an augmented reality app, where e.g. a pot of gold could be stored by a user at Starbucks, and this location annotation could be stored as a layer in our system via the API.
 
-*How to use it:*
-Click on a location on the map.  A set of nearby POI/businesses will populate.  Click on the link for any of these points and add a comment.  Go to the "Check Ins" page and click on the map to see nearby checkins/comments that have occurred.
+*How to try it out:*
+  * Go to: http://api.townme.com/demos/checkin-stream/checkin.html
+  * Click on a location on the map.  A set of nearby POI/businesses will populate.  
+  * Click on the link for any of these points and add a comment.  
+  * Go to the "Check Ins" page and click on the map to see nearby checkins/comments that have occurred.
 
 =Demo 2: Annotation of Twitter Streams with Locations=
 
