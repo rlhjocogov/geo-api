@@ -55,7 +55,7 @@ The Greasemonkey script converts a lat/lons on Twitter to "real location".  So t
   * *You can only use Firefox for this demo* due to the dependency on [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
   * Install [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
   * Install the user script at [http://geo-api.googlecode.com/svn/trunk/demos/twitter-greasemonkey/twitter-local.user.js].
-  * Go to: http://twitter.com/townmedemo (notice names of businesses are linked)
+  * Go to: http://twitter.com/townmedemo (notice names of businesses are linked) on *Firefox*
   * Go to: http://search.twitter.com/search?q=+near%3A%22san+francisco%22+within%3A5mi (notice points of interest in red)
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-greasemonkey
