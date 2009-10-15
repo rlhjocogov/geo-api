@@ -18,6 +18,8 @@ This means anyone can now much more easily write either (a) a location broadcast
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/checkin-stream
 
+http://blog-media.townme.com/checkindemo_final-small.png
+
 =Demo 2: Annotation of Twitter Streams with Locations=
 
 Some tweets are annotated with locations in the form of lat/lons.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  
@@ -40,6 +42,8 @@ If you go to the demo using an iPhone (you can also use: http://bit.ly/46pls2), 
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-nearby
 
+http://blog-media.townme.com/twitterstream_final-small.png
+
 =Demo 3: Greasemonkey Script for Twitter=
 
 _Shout out to Zboogs!_
@@ -60,3 +64,5 @@ The Greasemonkey script converts a lat/lons on Twitter to "real location".  So t
   * Go to: http://search.twitter.com/search?q=+near%3A%22san+francisco%22+within%3A5mi (notice points of interest in *_red_*)
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-greasemonkey
+
+http://blog-media.townme.com/twitter-neighborhood-demo.png
