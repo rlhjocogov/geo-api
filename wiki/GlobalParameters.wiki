@@ -10,5 +10,5 @@
     * Format: set to '1' if you want prettified results.
   * *jsoncallback*: 
     * Optional. 
-    * Description: Return response in [http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/ JSONP] format. Also, check out JQuery has nice [http://docs.jquery.com/Ajax/jQuery.getJSON support for JSONP callbacks]. 
+    * Description: Return response in [http://bob.pythonmac.org/archives/2005/12/05/remote-json-jsonp/ JSONP] format. JQuery has nice [http://docs.jquery.com/Ajax/jQuery.getJSON support for JSONP callbacks]. 
     * Format: json prefix string
