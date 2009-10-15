@@ -8,7 +8,8 @@ All your use of the API must follow these requirements, in addition to the [http
 
 ===Display Requirements===
 
-  * Feel free to (but you are not required to) email "api _at_ townme _dot_ com" before you launch anything.  We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
+  * Feel free to (but you are not required to) email "api _at_ townme _dot_ com" before you launch anything.  
+    * We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
   * When you display information from the !TownMe API, you must display one of the !TownMe logos so it is clear to the user that the data is from !TownMe.
 
 =insert logo=
