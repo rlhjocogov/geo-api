@@ -37,17 +37,22 @@ If you go to the URL of the demo using an iPhone, we will pull lat/lons from the
   * This demo refreshes the Twitter stream every 5 seconds (so as not to send too many requests to Twitter from our server).  Actual performance if integrated into a Twitter client would be substantially more awesome.
   * We snap tweets to the nearest point of interest (rather then a business) since we do business related demos above.  This means that for cities with sparser points of interest, the sets of nearby places that are annotated to tweets may be relatively small.  
 
+*Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-nearby
+
 =Demo 3: Greasemonkey Script for Twitter=
 
 _Shout out to Zboogs!_
-To play with this demo, install Greasemonkey and then install the [http://code.google.com/p/geo-api/source/browse/#svn/trunk twitter-local] script.
+
+*How to try it out:*
+  * Install Greasemonkey 
+  * Install the user script at [http://code.google.com/p/geo-api/source/browse/#svn/trunk twitter-local].
+  * Go to: http://twitter.com/townmedemo (notice names of businesses are linked)
+  * Go to: http://search.twitter.com/search?q=+near%3A%22san+francisco%22+within%3A5mi (notice points of interest in red)
 
 *Part 1: Convert Place Names Into Canonical Locations*
 
 We think it would be cool for there to be a "bit.ly for locations" or "hash tags for locations".  To this end we wrote a greasemonkey script that converts "::POI-name" into a linked URL for a point of interest near to where the user is.  We demo this as a Greasemonkey script for Twitter with the assumption that you, the user, are close to Ritual Roaster in San Francisco.  i.e. if you write "::ritual" or "::other-place-near-ritual" we will automatically convert "::ritual" to a link for "ritual roasters" and will take "::other-place-near-ritual" and resolve it to whatever likely business or point of interest that is.  (In this proof of concept demo we actually resolve to the closest POI or business that matches the string, so right now there is nothing to resolve ambiguities)
 
-This could be a really great layer for any Twitter client app to add.
-
 *Part 2: Convert Coordinates into Points of Interest*
 
-The Greasemonkey script converts a lat/longs on Twitter to "real location".  So the coordinates "37.7600, -122.4270" get converted to "Dolores Park / Mission District / San Francisco".  The cool thing about this is if you are running greasemonkey you can actually see this location annotation occur in real time to your Twitter stream.  So this is a way for any Twitter user to see where all the people they are following are tweeting from.
+The Greasemonkey script converts a lat/lons on Twitter to "real location".  So the coordinates "37.7600, -122.4270" get converted to "Dolores Park / Mission District / San Francisco".  The cool thing about this is if you are running greasemonkey you can actually see this location annotation occur in real time to your Twitter stream.  So this is a way for any Twitter user to see where all the people they are following are tweeting from.
