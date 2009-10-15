@@ -17,7 +17,7 @@ All your use of the API must follow these requirements, in addition to the [http
     * http://blog-media.townme.com/townme-apilogo79x32.png
     * http://blog-media.townme.com/townme-apilogo71x28.png
     * http://blog-media.townme.com/townme-apilogo63x24.png
-  * Mobile sites may optionally use one of the smaller images if they like(please note, these are for mobile use only).  Mobile sites can also use any of the above images.
+  * Mobile sites may optionally use one of the smaller images if they like (please note, these are for mobile use only).  Mobile sites can also use any of the above images.
     * http://blog-media.townme.com/townme-apilogo100x19.png
     * http://blog-media.townme.com/townme-apilogo63x24.png
 
