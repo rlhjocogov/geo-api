@@ -1,5 +1,7 @@
-This demo is a simple Greasemonkey script that usese the TownMe GeoAPI (http://code.google.com/p/geo-api) to modify some pages on Twitter. It modifies pages in two ways:
+This demo is a simple Greasemonkey script that usese the TownMe GeoAPI (http://code.google.com/p/geo-api) to modify some pages on Twitter. To try out this demo, Install Greasemonkey and install the script at: http://geo-api.googlecode.com/svn/trunk/demos/twitter-greasemonkey/twitter-local.user.js
 
+
+This demo modifies pages in two ways:
 1) Convert Place Names Into Canonical Locations
 On pages that list tweets (ex. http://twitter.com/townmedemo), the script tries to do something similar to #hashtags for locations in the format of ::business-name. Given that the vast majority of tweets do not yet have a lat/lon annotation, the script assumes ('37.75647', '-122.421218'), which is at Ritual Roasters in San Francisco. So, if you have the script installed and have a tweet with something like ::Dosa, it will turn it into a link to Dosa Restaurant, which is close to the assumed lat/lon.
 
