@@ -10,6 +10,9 @@ what comments people posted in the area while checking in.
 
 This means anyone can now much more easily write either (a) a location broadcast app or (b) an augmented reality app, where e.g. a pot of gold could be stored by a user at Starbucks, and this location annotation could be stored as a layer in our system via the API.
 
+*How to use it:*
+Click on a location on the map.  A set of nearby POI/businesses will populate.  Click on the link for any of these points and add a comment.  Go to the "Check Ins" page and click on the map to see nearby checkins/comments that have occurred.
+
 =Demo 2: Annotation of Twitter Streams with Locations=
 
 Twitter recently launched a simple API which allows lat/longs to be appended at tweets.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  
