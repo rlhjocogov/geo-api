@@ -12,11 +12,16 @@ This means anyone can now much more easily write either (a) a location broadcast
 
 =Demo 2: Annotation of Twitter Streams with Locations=
 
-Twitter recently launched a simple API which allows lat/longs to be appended at tweets.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  In this demo, we take a live stream of tweets and do location lookups based on the associated coordinates.  We then annotate *nearby* (rather then exact) locations in real time and display the result.  
+Twitter recently launched a simple API which allows lat/longs to be appended at tweets.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  
+
+In this demo, we take a live stream of tweets and do location lookups based on the associated coordinates.  We then annotate *nearby* (rather then exact) locations in real time and display the result.  
 
 So you can see that someone tweeted from "Near Dolores Park / Mission District / San Francisco" instead of "37.7600, -122.4270".  This is a cool way to get "real location" context for real time information.
 
 This could be a great add on for any Twitter client or other location focused application.
+
+*How to use it:*
+Click on the map and we will show you a stream of nearby tweets annotated by location.  If you go to the URL of the demo using an iPhone, we will pull lat/longs from the phone and use that to select the map location.
 
 (Note: This demo refreshes every 5 seconds due to limitations about how we built this quick demo relative to the Twitter API.  Actual performance if integrated into a Twitter client should be substantially more awesome)
 
