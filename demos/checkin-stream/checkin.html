@@ -9,13 +9,14 @@
     <script type="text/javascript" src="checkin.js"></script>
   </head>
   <body onload="init('checkin')" onunload="GUnload()">
-    <h2 id="parents">San Francisco Places | <a href="checkin_stream.html">City Check-In Stream</a></h2>
+    <h2 id="parents">&nbsp</h2>
     <div style="width: 600px">
     <div id="map_canvas" style="width: 500px; height: 300px"></div>
     <h3>Click Anywhere on the Map to Check In Somewhere!</h3>
     <form onsubmit="return false">
       <input id="apikey" name="apikey" type="hidden" value="demo">
-      <input id="radius" name="radius" type="hidden" size="8" value="50">
+      <input id="radius" name="radius" type="hidden" value="200">
+      <input id="limit" name="radius" type="hidden" value="20">
       <div class="latlong">
 	Lat: <input id="lat" name="lat" type="text" size="15" value="37.75647">
 	Lon: <input id="lon" name="lon" type="text" size="15" value="-122.421218">
