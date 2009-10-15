@@ -16,6 +16,6 @@ If you see any errors, or have suggestions for good data sources to use, please 
   * [http://www.zillow.com Zillow neighborhood data]
 
 = Additional Sources =
-There are a number of data sets we paid for or which otherwise do not make sense for us to attribute here.  
+There are a number of additional data sets we paid for or which otherwise we can not attribute here.  
 
 If you have suggestions for data you think should be added to the API, please contact us at "api _at_ townme _dot_ com"
