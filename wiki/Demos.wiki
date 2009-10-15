@@ -32,7 +32,7 @@ So you can see that someone tweeted from "Near Dolores Park / Mission District /
   * A stream of nearby tweets annotated by location will start showing (location annotations in red) 
 
 *How to use it on your iPhone:*
-If you go to the URL of the demo using an iPhone, we will pull lat/lons from the phone and use that to show a nearby Tweet.
+If you go to the demo using an iPhone (you can also use: http://bit.ly/46pls2), we will pull lat/lon from the phone and use that to show a nearby Tweet.
 
 *Caveats:* Given that a single person built this demo in a few hours there are some caveats:
   * This demo refreshes the Twitter stream every 5 seconds (so as not to send too many requests to Twitter from our server).  Actual performance if integrated into a Twitter client would be substantially more awesome.
