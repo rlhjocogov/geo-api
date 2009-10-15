@@ -46,7 +46,9 @@ function initLatLon() {
 // Add a point of interest to the map.
 function addMapPoint(name, lat, lon) {
     var point = new GLatLng(lat, lon);
-    _map.addOverlay(new GMarker(point));
+    if (GBrowserIsCompatible()) {
+	_map.addOverlay(new GMarker(point));
+    }
 }
 
 // Update the status line (e.g. searching, errors, etc.)
@@ -128,7 +130,6 @@ function search() {
 // Search using the lat/lon from _lat/_lon (normally set from the map).
 function searchWithLatLon() {
     reset();
-    document.body.style="cursor:wait";
     _listings = {};
     _apikey = $("#apikey").val();
     var limit = $("#limit").val();
@@ -224,9 +225,13 @@ function displayCheckins(status) {
 
 // Resets the cursor, map, and result table.
 function reset() {
-    document.body.style="";
-    _map.clearOverlays();
+    updateStatus("Resetting.");
+    if (GBrowserIsCompatible()) {
+	_map.clearOverlays();
+    }
+    updateStatus("Cleared Map.");
     $("#results").empty();
+    updateStatus("Cleared Results.");
 }
 
 // Displays listings of points of interest and allow people to check in.
