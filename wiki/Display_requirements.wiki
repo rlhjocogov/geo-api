@@ -1,15 +1,15 @@
-This page contains the Requirements for Display of TownMe Attribution for applications using the [http://code.google.com/p/geo-api/ TownMe GeoAPI].
+This page contains the Requirements for Display of !TownMe Attribution for applications using the [http://code.google.com/p/geo-api/ TownMe GeoAPI].
 
 ===Introduction===
 
-We think there are some really amazing applications that you will build through use of the TownMe API.  As part of this brave new world of apps we want to ensure there is consistency in how the data is displayed and used.   
+We think there are some really amazing applications that you will build through use of the !TownMe API.  As part of this brave new world of apps we want to ensure there is consistency in how the data is displayed and used.   
 
 All your use of the API must follow these requirements, in addition to the [http://code.google.com/p/geo-api/wiki/TermsOfUse API Agreement].
 
 ===Display Requirements===
 
   * Feel free to (but you are not required to) email "api _at_ townme _dot_ com" before you launch anything.  We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
-  * When you display information from the TownMe API, you must display one of the TownMe logos so it is clear to the user that the data is from TownMe.
+  * When you display information from the !TownMe API, you must display one of the !TownMe logos so it is clear to the user that the data is from !TownMe.
 
 =insert logo=
 
@@ -27,7 +27,7 @@ All your use of the API must follow these requirements, in addition to the [http
 ===Things you are not allowed to do:===
   * Don't cache or store information from the API, or make bulk requests. The API is for user-initiated, real time requests.
 
-  * Don't  use “nofollow” on your links to TownMe.  Links back to TownMe need to be followable. 
+  * Don't  use “nofollow” on your links to !TownMe.  Links back to !TownMe need to be followable. 
 
   * Don't modify any of the information from the API (this also includes our logo/graphics).
 
