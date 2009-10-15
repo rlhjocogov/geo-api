@@ -1,4 +1,4 @@
-= Data Sources Used by TownMe =
+= Data Sources Used by !TownMe =
 
 TownMe uses a variety of data sources in this API.  Some of these sources we have attributed below, while others we either paid for or otherwise didn't make sense for us to attribute.  
 
@@ -10,7 +10,7 @@ If you see any errors, or have suggestions for good data sources to use, please 
 = Subset of Sources With Attribution =
 
   * [http://www.localeze.com Localeze business listing data]
-  * [http://www.townme.com TownMe.com aggregation data]
+  * [http://www.townme.com !TownMe.com aggregation data]
   * [http://www.census.gov/geo/www/tiger/ US Census TIGER data]
   * [http://developer.yahoo.com/geo/ Yahoo! GeoPlanet(TM) data]
   * [http://www.zillow.com Zillow neighborhood data]
