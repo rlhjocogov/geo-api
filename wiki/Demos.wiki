@@ -52,7 +52,7 @@ We think it would be cool for there to be a "bit.ly for locations" or "hash tags
 The Greasemonkey script converts a lat/lons on Twitter to "real location".  So the coordinates "37.7600, -122.4270" get converted to "Dolores Park / Mission District / San Francisco".  The cool thing about this is if you are running greasemonkey you can actually see this location annotation occur in real time to your Twitter stream.  So this is a way for any Twitter user to see where all the people they are following are tweeting from.
 
 *How to try it out:*
-  * You can only use Firefox for this demo due to the dependency on [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
+  * *You can only use Firefox for this demo* due to the dependency on [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
   * Install [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
   * Install the user script at [http://geo-api.googlecode.com/svn/trunk/demos/twitter-greasemonkey/twitter-local.user.js].
   * Go to: http://twitter.com/townmedemo (notice names of businesses are linked)
