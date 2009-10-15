@@ -29,7 +29,7 @@ Click on the map and we will show you a stream of nearby tweets annotated by loc
 *How to use it on your iPhone:*
 If you go to the URL of the demo using an iPhone, we will pull lat/longs from the phone and use that to select the location coordinate for which we show a nearby Tweet.
 
-*Caveats:* Given that a single person built this demo in a few hours there are lots of things that could be improved:
+*Caveats:* Given that a single person built this demo in a few hours there are some caveats:
   * This demo refreshes every 5 seconds due to limitations about how we built this quick demo relative to the Twitter API.  Actual performance if integrated into a Twitter client should be substantially more awesome.
   * We snap tweets to the nearest point of interest (rather then a business) since we do business related demos above.  This means that for cities with sparser points of interest, the sets of nearby places that are annotated to tweets may be relatively small.  
 
