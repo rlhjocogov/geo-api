@@ -14,6 +14,7 @@ This means anyone can now much more easily write either (a) a location broadcast
   * Click on a location on the map.  A set of nearby POI/businesses will populate.  
   * Click on the link for any of these points and add a comment.  
   * Click on "Check-ins Nearby" page and click on the map to see nearby checkins/comments that have occurred.
+  * *IMPORTANT* If there are no check-ins on the "check-ins nearby" page the page will be blank.  So you need to toggle back to "San Francisco locations" and then click on the map to see additional places to check in.
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/checkin-stream
 
