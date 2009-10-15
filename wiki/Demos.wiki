@@ -15,24 +15,26 @@ This means anyone can now much more easily write either (a) a location broadcast
   * Click on the link for any of these points and add a comment.  
   * Go to the "Check Ins" page and click on the map to see nearby checkins/comments that have occurred.
 
+*Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/checkin-stream
+
 =Demo 2: Annotation of Twitter Streams with Locations=
 
-Twitter recently launched a simple API which allows lat/longs to be appended at tweets.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  
+Some tweets are annotated with locations in the form of lat/lons.  The coordinates of these tweets are not converted into locations, so it is hard for the user to tell where the user tweeted from without doing a search.  
 
 In this demo, we take a live stream of tweets and do location lookups based on the associated coordinates.  We then annotate *nearby* (rather then exact) locations in real time and display the result.  
 
 So you can see that someone tweeted from "Near Dolores Park / Mission District / San Francisco" instead of "37.7600, -122.4270".  This is a cool way to get "real location" context for real time information.
 
-This could be a great add on for any Twitter client or other location focused application.
-
-*How to use it:*
-Click on the map and we will show you a stream of nearby tweets annotated by location.  
+*How to try it out:*
+  * Go to: http://api.townme.com/demos/twitter-nearby/
+  * Select your location on the map (note for iPhone users below)
+  * A stream of nearby tweets annotated by location will start showing (location annotations in red) 
 
 *How to use it on your iPhone:*
-If you go to the URL of the demo using an iPhone, we will pull lat/longs from the phone and use that to select the location coordinate for which we show a nearby Tweet.
+If you go to the URL of the demo using an iPhone, we will pull lat/lons from the phone and use that to show a nearby Tweet.
 
 *Caveats:* Given that a single person built this demo in a few hours there are some caveats:
-  * This demo refreshes the Twitter stream every 5 seconds (and then adds location in real time) due to limitations about how we built this quick demo relative to the Twitter API.  Actual performance if integrated into a Twitter client should be substantially more awesome.
+  * This demo refreshes the Twitter stream every 5 seconds (so as not to send too many requests to Twitter from our server).  Actual performance if integrated into a Twitter client would be substantially more awesome.
   * We snap tweets to the nearest point of interest (rather then a business) since we do business related demos above.  This means that for cities with sparser points of interest, the sets of nearby places that are annotated to tweets may be relatively small.  
 
 =Demo 3: Greasemonkey Script for Twitter=
