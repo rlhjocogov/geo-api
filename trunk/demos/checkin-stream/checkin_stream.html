@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <title>City Check-In Stream</title>
+    <title>Check-Ins Nearby</title>
     <link href="checkin.css" rel="stylesheet" type="text/css">
     <script type="text/javascript"
 	    src="http://www.google.com/jsapi?key=ABQIAAAAs9VkCpQBysM7j2yW_7mnGRRBkZLExEkQEd5dQ7IXRMi0mqzxJRS4L9_dZTqYaaq_jso4-OdLpO7Qeg"></script>
@@ -9,12 +9,13 @@
     <script type="text/javascript" src="checkin.js"></script>
   </head>
   <body onload="init('view')" onunload="GUnload()">
-    <h2 id="parents"><a href="checkin.html">San Francisco Places</a> | City Check-In Stream</h2>
+    <h2 id="parents">&nbsp;</h2>
     <div style="width: 600px">
     <div id="map_canvas" style="width: 500px; height: 300px"></div>
     <form onsubmit="return false">
       <input id="apikey" name="apikey" type="hidden" value="demo">
-      <input id="radius" name="radius" type="hidden" size="8" value="100">
+      <input id="radius" name="radius" type="hidden" value="200">
+      <input id="limit" name="radius" type="hidden" value="50">
       <div class="latlong">
 	Lat: <input id="lat" name="lat" type="text" size="15" value="37.75647">
 	Lon: <input id="lon" name="lon" type="text" size="15" value="-122.421218">

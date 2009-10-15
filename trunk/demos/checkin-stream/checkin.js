@@ -9,6 +9,7 @@ var _lat;
 var _lon;
 var _map;
 var _mode;  // "checkin" to let people check in, "view" to see recent checkins.
+var _zoom = 13;
 
 google.load("maps", "2.x");
 google.load("jquery", "1.3.1");
@@ -22,12 +23,24 @@ function escapeHTML(s) {
 // Initialize the map and the mode.
 function init(mode) {
     _mode = mode;
+    initLatLon();
     if (GBrowserIsCompatible()) {
 	_map = new GMap2($("#map_canvas").get(0));
-	_map.setCenter(new GLatLng($("#lat").val(), $("#lon").val()), 13);
+	_map.setCenter(new GLatLng($("#lat").val(), $("#lon").val()), _zoom);
 	_map.addControl(new GLargeMapControl());
 	GEvent.addListener(_map, "click", mapClick);
     }
+    search();
+}
+
+// Initialize latitude/longitude from URL query parameters if present.
+function initLatLon() {
+  groups = window.location.search.match(/lat=([0-9.-]+)&lon=([0-9.-]+)/);
+  if (groups && groups.length == 3) {
+    $("#lat").val(groups[1]);
+    $("#lon").val(groups[2]);
+    _zoom = 16;
+  }
 }
 
 // Add a point of interest to the map.
@@ -54,7 +67,8 @@ function getParents() {
 // Displays the parents of the current location.
 function updateParents(data) {
     if (data['result'] == null) {
-	updateStatus("No response received from the server");
+	updateStatus("Service temporarily unavailable, please try again " +
+		     "later.");
 	return;
     }
 
@@ -75,14 +89,21 @@ function updateParents(data) {
 	    parentNames += " - ";
 	}
     }
+    updateHeader(parentNames);
+}
+
+// Displays the current neighborhood and header links.
+function updateHeader(parentNames) {
     var places = parentNames + ' Places';
-    var checkinStream = 'City Check-In Stream';
+    var checkinStream = 'Check-Ins Nearby';
+    var checkinUrl = 'checkin.html?lat=' + _lat + '&lon=' + _lon;
+    var checkinStreamUrl = 'checkin_stream.html?lat=' + _lat + '&lon=' + _lon;
     if (_mode == "checkin") {
-	$("#parents").html(places + ' | <a href="checkin_stream.html">' +
+	$("#parents").html(places + ' | <a href="' + checkinStreamUrl + '">' +
 			   checkinStream + '</a>');
     } else {
-	$("#parents").html('<a href="checkin.html">' + places + '</a> | ' +
-			   checkinStream);
+	$("#parents").html('<a href="' + checkinUrl + '">' + places +
+			   '</a> | ' + checkinStream);
     }
 }
 
@@ -106,12 +127,14 @@ function search() {
 
 // Search using the lat/lon from _lat/_lon (normally set from the map).
 function searchWithLatLon() {
-    updateStatus("Searching...");
+    reset();
+    document.body.style="cursor:wait";
     _listings = {};
     _apikey = $("#apikey").val();
+    var limit = $("#limit").val();
     var radius_in_meters = $("#radius").val();
     if (GBrowserIsCompatible()) {
-	_map.setCenter(new GLatLng(_lat, _lon), 18);
+	_map.setCenter(new GLatLng(_lat, _lon), 16);
     }
 
     getParents();
@@ -121,6 +144,7 @@ function searchWithLatLon() {
 	      "&lat=" + escape(_lat) +
 	      "&lon=" + escape(_lon) +
 	      "&radius=" + escape(radius_in_meters) + "m" +
+	      "&limit=" + escape(limit) +
 	      "&jsoncallback=?",
 	      buildListings);
 }
@@ -129,7 +153,8 @@ function searchWithLatLon() {
 function buildListings(data) {
     var entities = data['result'];
     if (entities == null) {
-	updateStatus("No response received from the server.");
+	updateStatus("Service temporarily unavailable, please try again " +
+		     "later.");
 	return;
     }
 
@@ -163,23 +188,30 @@ function buildListings(data) {
     if (_mode == "checkin") {
 	displayResults(
 	    "Click on any of the places listed below to check in there:");
+    } else {
+        displayCheckins("Check-Ins:");
     }
 }
 
 // Displays point of interest names and comments for recent checkins.
-function displayCheckins() {
+function displayCheckins(status) {
     reset();
+
+    if (status) {
+	updateStatus(status);
+    }
 
     for (var guid in _listings) {
 	var name = _listings[guid]['name'];
 	var lat = _listings[guid]['lat'];
 	var lon = _listings[guid]['lon'];
 	var comments = _listings[guid]['comments'];
-	if (name && comments.length > 0) {
-	    addMapPoint(name, lat, lon);
+	if (!name || !comments || comments.length == 0) {
+	    continue;
 	}
+	addMapPoint(name, lat, lon);
 	for (var i = 0; i < comments.length; ++i) {
-	    if (name && comments[i]) {
+	    if (comments[i]) {
 		$("#results").append(
 		    '<tr><td class="poi">' +
 			'<a href="http://www.townme.com/' + guid + '">' +
@@ -190,19 +222,20 @@ function displayCheckins() {
     }
 }
 
-// Resets the map and result table.
+// Resets the cursor, map, and result table.
 function reset() {
+    document.body.style="";
     _map.clearOverlays();
     $("#results").empty();
 }
 
 // Displays listings of points of interest and allow people to check in.
 function displayResults(status) {
+    reset();
+
     if (status) {
 	updateStatus(status);
     }
-
-    reset();
 
     for (var guid in _listings) {
 	var name = _listings[guid]['name'];
@@ -238,8 +271,7 @@ function getComments(guid) {
 
     function loadComments(data) {
 	_listings[guid]['comments'] = data['comments'];
-	displayCheckins();
-	updateStatus("Check-Ins:");
+	displayCheckins("Check-Ins:");
     }
 }
 
