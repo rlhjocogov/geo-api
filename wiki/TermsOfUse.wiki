@@ -2,7 +2,7 @@
 
 ==Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the !TownMe GeoAPI brought to you by Mixer Labs, Inc.==
 
-We are launching this alpha GeoAPI for use by the broader developer community.  We decided to open this API because we built it for our own purposes to run [http://www.townme.com/ !TownMe] and kept getting requests from friends who were interested in using the data to do cool/interesting/crazy things.  
+We are launching this alpha GeoAPI for use by the broader developer community.  We decided to open this API because we built it for our own purposes to run [http://www.townme.com/ TownMe] and kept getting requests from friends who were interested in using the data to do cool/interesting/crazy things.  
 
 There is some really exciting stuff happening right now in location based services and we want the community to benefit from the hard work we put into building our own geo-infrastructure.  We currently do not charge for the GeoAPI, run ads against it, or anything like that.  We have put a lot of time and effort into building this API, licensing or otherwise acquiring the data, and running the service.  As such we ask that you properly [Display_requirements attribute] !TownMe as the data source/service that powers location on your app if you use the API. 
 
