@@ -225,13 +225,10 @@ function displayCheckins(status) {
 
 // Resets the cursor, map, and result table.
 function reset() {
-    updateStatus("Resetting.");
     if (GBrowserIsCompatible()) {
 	_map.clearOverlays();
     }
-    updateStatus("Cleared Map.");
     $("#results").empty();
-    updateStatus("Cleared Results.");
 }
 
 // Displays listings of points of interest and allow people to check in.
