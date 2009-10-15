@@ -121,8 +121,9 @@
         $("#loadwait").hide()
         $("#tweetlist").show()
         $("#latlon").text('(' + lat + ',' + lon + ')')
-        var url = "http://api.townme.com/v1/twitter?jsoncallback=?"
-        url += "&lat=" + lat + "&lon=" + lon
+        var url = "http://search.twitter.com/search.json?"
+        url += "geocode=" + lat + "%2C" + lon + "%2C5mi"
+        url +="&callback=?"
         $.getJSON(url, function(data) { // Get tweets
           $.each(data.results, function(num) {
             var tweet = data.results[num]
