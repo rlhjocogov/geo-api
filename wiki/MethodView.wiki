@@ -101,4 +101,4 @@ http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/uservie
 }
 }}}
 
-Writing to a view overwrites its contents.
+Writing to a view overwrites its contents. You can fetch a view like any system view, the results will be returned verbatim.
