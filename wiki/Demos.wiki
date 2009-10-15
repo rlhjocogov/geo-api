@@ -13,7 +13,7 @@ This means anyone can now much more easily write either (a) a location broadcast
   * Go to: http://api.townme.com/demos/checkin-stream/checkin.html
   * Click on a location on the map.  A set of nearby POI/businesses will populate.  
   * Click on the link for any of these points and add a comment.  
-  * Go to the "Check Ins" page and click on the map to see nearby checkins/comments that have occurred.
+  * Click on "Check Ins Nearby" page and click on the map to see nearby checkins/comments that have occurred.
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/checkin-stream
 
