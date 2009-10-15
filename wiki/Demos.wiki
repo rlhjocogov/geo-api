@@ -38,7 +38,7 @@ To play with this demo, install Greasemonkey and then install the [http://code.g
 
 *Part 1: Convert Place Names Into Canonical Locations*
 
-We think it would be cool for there to be a "bit.ly for locations" or "hash tags for locations".  To this end we wrote a greasemonkey script that converts "::POI-name" into a linked URL for a point of interest near to where the user is.  We demo this as a Greasemonkey script for Twitter with the assumption that you, the user, are close to Ritual Roaster in San Francisco.  i.e. if you write "::ritual" or "::other-place-near-ritual" we will automatically convert "::ritual" to a link for "ritual roasters" and will take "::other-place-near-ritual" and resolve it to whatever likely business or point of interest that is.  (We actually resolve to the closest POI or business that matches the string, so right now there is nothing to resolve ambiguities)
+We think it would be cool for there to be a "bit.ly for locations" or "hash tags for locations".  To this end we wrote a greasemonkey script that converts "::POI-name" into a linked URL for a point of interest near to where the user is.  We demo this as a Greasemonkey script for Twitter with the assumption that you, the user, are close to Ritual Roaster in San Francisco.  i.e. if you write "::ritual" or "::other-place-near-ritual" we will automatically convert "::ritual" to a link for "ritual roasters" and will take "::other-place-near-ritual" and resolve it to whatever likely business or point of interest that is.  (In this proof of concept demo we actually resolve to the closest POI or business that matches the string, so right now there is nothing to resolve ambiguities)
 
 This could be a really great layer for any Twitter client app to add.
 
