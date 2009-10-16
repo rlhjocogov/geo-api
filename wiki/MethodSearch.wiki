@@ -118,7 +118,7 @@ http://api.townme.com/v1/search?lat=37.75647&lon=-122.421218&radius=0.1km&apikey
 || mile || mi ||
 || yard || yd ||
 
-__below are some other distance we units we support for fun. No guarantees about them working long-term, but figured we'd try to make pirates, Brits, Indians, astronomers, statisticians and MIT students feel at home :).__
+__Below are some other distance units we support for fun. No guarantees about them working long-term, but we figured we'd try to make pirates, Brits, Indians, astronomers, statisticians and MIT students feel at home :).__
 
 || unit || abbreviation ||
 || British foot || british_ft ||
