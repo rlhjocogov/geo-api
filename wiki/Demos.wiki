@@ -9,6 +9,9 @@ what comments people posted in the area while checking in.
 
 This means anyone can now much more easily write either (a) a location broadcast app or (b) an augmented reality app, where e.g. a pot of gold could be stored by a user at Starbucks, and this location annotation could be stored as a layer in our system via the API.
 
+*Key point*
+This is an all javascript demo from the developer perspective.  We are not only *reading* locations from the API, but also literally *writing* information onto the TownMe API servers to the unique virtual overlay or layer each API key comes with.  This is a unique aspect of this API - the ability to write your own virtual overlay of the world (or at least the parts of the world we currently support)
+
 *How to try it out:*
   * Go to: http://api.townme.com/demos/checkin-stream/checkin.html
   * Click on a location on the map.  A set of nearby POI/businesses will populate.  
