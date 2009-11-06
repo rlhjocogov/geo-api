@@ -2,18 +2,10 @@
 
 =MQL search=
 
+
 Method to search entities using the [http://www.freebase.com/view/en/documentation Metaweb Query Language] (MQL). This is the more powerful way to search for entities, as it allows developers to express constraints on properties of entities, *including values contained in views*.
 
 *Getting Started*: We recommend that you first take a look at the [http://download.freebase.com/MQLReferenceGuide.pdf MQL Reference Guide] and [http://download.freebase.com/MQLcheatsheet-081208.pdf MQL Cheat Sheet] to get an idea of how MQL works.
-
-==Supported MQL operators==
-===[http://mql.freebaseapps.com/ch03.html#operators equality]===
-{{{"name": "Tartine"}}} name is required to be equal to "Tartine".
-===[http://mql.freebaseapps.com/ch03.html#butnotoperator inequality (but not operator)]===
-{{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
-===[http://mql.freebaseapps.com/ch03.html#matchsyntax prefix]===
-{{{"name^=": "The"}}} name is required to start with "The". 
-*Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
 
 ==URL==
 
@@ -64,30 +56,42 @@ Geo search queries follow the pattern below:
 }}}
 
 *Field explanation*
-  * *<lat>*: 
+  * {{{<lat>}}}: 
     * Required. 
     * Description: Decimal latitude for search. 
     * Format: Positive or negative floating point number (ex. 37.75647)
-  * *<lon>*: 
+  * {{{<lon>}}}: 
     * Required. 
     * Description: Decimal longitude for search. 
     * Format: positive or negative floating point number (ex. -122.421218)
-  * *<radius>*: 
+  * {{{<radius>}}}: 
     * Required. 
     * Description: Search radius. 
     * Format: Floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km (2km if you constrain type to POI).
-  * *<entity_attribute>*
+  * {{{<entity_attribute>}}}
     * Optional
     * Description: Any number of entity attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
     * Format: The full list of attributes is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
-  * *<view_name>*
+  * {{{<view_name>}}}
     * Optional
     * Description: Specifying a view allows you to filter based on its values and/or get back those values for returned entities. 
     * Format: Name of a view. Currently supported views are 'listing' and user-defined views.
-  * *<view_attribute>*
+  * {{{<view_attribute>}}}
     * Optional
     * Description: Any number of view attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
     * Format: Valid attribute names for the specified view. For example, for the 'listing' view, the possible attributes can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
+
+==Supported MQL operators==
+===equality===
+{{{"name": "Tartine"}}} name is required to be equal to "Tartine".
+[http://mql.freebaseapps.com/ch03.html#operators MQL doc]
+===inequality (but not operator)===
+{{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
+[http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
+===prefix===
+{{{"name^=": "The"}}} name is required to start with "The". 
+*Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
+[http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
 
 
 ==Examples==
