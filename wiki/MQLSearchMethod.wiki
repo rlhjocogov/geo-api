@@ -36,6 +36,7 @@ For example, to express that you want the names and prices of all menu items tha
 }
 }}}
 
+==GeoAPI Queries==
 Geo search queries follow the pattern below:
 {{{
 {
