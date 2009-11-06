@@ -31,7 +31,7 @@ http://api.townme.com/v1/search
 
 
 ==General Idea==
-The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify fields you want to constrain by setting their values and fields that you want to be returned by specifying their values as 'null'. 
+The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify attributes you want to constrain by setting their values and attributes that you want to be returned by specifying their values as 'null'. 
 
 For example, to express that you want the names and prices of all menu items that are of type 'desert', you could have the following:
 {{{
@@ -51,17 +51,44 @@ Geo search queries follow the pattern below:
   "lon": <lon>,
   "radius": <radius>,
   "entity": [{
-    <entity_field_1>,
-    <entity_field_2>,
+    <entity_attribute_1>,
+    <entity_attribute_2>,
     ...,
     "view.<view_name>": {
-      <view_field_1>,
-      <view_field_2>,
+      <view_attribute_1>,
+      <view_attribute_2>,
       ...
     }
   }]
 }
 }}}
+
+*Field explanation*
+  * *<lat>*: 
+    * Required. 
+    * Description: Decimal latitude for search. 
+    * Format: Positive or negative floating point number (ex. 37.75647)
+  * *<lon>*: 
+    * Required. 
+    * Description: Decimal longitude for search. 
+    * Format: positive or negative floating point number (ex. -122.421218)
+  * *<radius>*: 
+    * Required. 
+    * Description: Search radius. 
+    * Format: Floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km (2km if you constrain type to POI).
+  * *<entity_attribute>*
+    * Optional
+    * Description: Any number of entity attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
+    * Format: The full list of attributes is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
+  * *<view_name>*
+    * Optional
+    * Description: Specifying a view allows you to filter based on its values and/or get back those values for returned entities. 
+    * Format: Name of a view. Currently supported views are 'listing' and user-defined views.
+  * *<view_attribute>*
+    * Optional
+    * Description: Any number of view attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
+    * Format: Valid attribute names for the specified view. For example, for the 'listing' view, the possible attributes can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
+
 
 ==Examples==
 
