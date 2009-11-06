@@ -83,16 +83,15 @@ Geo search queries follow the pattern below:
     * Format: Valid attribute names for the specified view. For example, for the 'listing' view, the possible attributes can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
 
 ==Supported MQL operators==
-===equality===
-{{{"name": "Tartine"}}} name is required to be equal to "Tartine".
-[http://mql.freebaseapps.com/ch03.html#operators MQL doc]
-===inequality (but not operator)===
-{{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
-[http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
-===prefix===
-{{{"name^=": "The"}}} name is required to start with "The". 
-*Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
-[http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
+ * *equality*
+    * ex: {{{"name": "Tartine"}}} name is required to be equal to "Tartine".
+    * [http://mql.freebaseapps.com/ch03.html#operators MQL doc]
+  * *inequality* (but not operator)
+    * {{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
+    * [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
+  * *prefix*
+    * {{{"name^=": "The"}}} name is required to start with "The". *Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
+    * [http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
 
 
 ==Examples==
