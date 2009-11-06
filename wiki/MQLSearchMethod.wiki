@@ -23,7 +23,7 @@ http://api.townme.com/v1/search
 
 
 ==General Idea==
-The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify attributes you want to constrain by setting their values and attributes that you want to be returned by specifying their values as 'null'. 
+The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify properties you want to constrain by setting their values and properties that you want to be returned by specifying their values as 'null'. 
 
 For example, to express that you want the names and prices of all menu items that are of type 'desert', you could have the following:
 {{{
@@ -45,12 +45,12 @@ Geo search queries follow the pattern below:
   "radius": <radius>,
   "limit": <limit>,
   "entity": [{
-    <entity_attribute_1>,
-    <entity_attribute_2>,
+    <entity_property_1>,
+    <entity_property_2>,
     ...,
     "view.<view_name>": {
-      <view_attribute_1>,
-      <view_attribute_2>,
+      <view_property_1>,
+      <view_property_2>,
       ...
     }
   }]
@@ -74,31 +74,35 @@ Geo search queries follow the pattern below:
     * Optional. 
     * Description: Max number of results to return.
     * Format: Positive integer. Default is 10 and maximum is 100.
-  * {{{<entity_attribute>}}}
+  * {{{<entity_property>}}}
     * Optional
-    * Description: Any number of entity attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
-    * Format: The full list of attributes is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
+    * Description: Any number of entity property. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
+    * Format: The full list of property is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
   * {{{<view_name>}}}
     * Optional
     * Description: Specifying a view allows you to filter based on its values and/or get back those values for returned entities. 
     * Format: Name of a view. Currently supported views are 'listing' and user-defined views.
-  * {{{<view_attribute>}}}
+  * {{{<view_property>}}}
     * Optional
-    * Description: Any number of view attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
-    * Format: Valid attribute names for the specified view. For example, for the 'listing' view, the possible attributes can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
+    * Description: Any number of view property. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
+    * Format: Valid property names for the specified view. For example, for the 'listing' view, the possible properties can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
 
-==Supported MQL operators==
-  * *equality*
+==Constraining Properties==
+_Properties can be constrained using several standard MQL operators. They way you constrain a property (i.e. filter by a specific value) is by specifying that property and the value by which you want it filtered. The list of supported operators are below._
+  * *equality* - [http://mql.freebaseapps.com/ch03.html#operators MQL doc]
     * ex: {{{"name": "Tartine"}}} name is required to be equal to "Tartine".
-    * [http://mql.freebaseapps.com/ch03.html#operators MQL doc]
-  * *inequality* (but not operator)
+  * *inequality* (but not operator) - [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
     * {{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
-    * [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
-  * *prefix*
+  * *prefix* - [http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
     * {{{"name^=": "The"}}} name is required to start with "The". *Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
-    * [http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
 
-
+==Requesting Properties==
+_Properties can be requested (from entities or views) by specifying the property name and 'null' as its value. You can request all properties of an entity or view by passing in a wildcard._
+  * *property to request* - [http://mql.freebaseapps.com/ch03.html#mqlids MQL doc]
+    * {{{"name": null}}} Fill in the name property in the response.
+  * *wildcards* [http://mql.freebaseapps.com/ch03.html#wildcards MQL doc]
+    * {{{"*": null}}} Return all properties.
+ 
 ==Examples==
 
 Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parametrizes the entire query.
