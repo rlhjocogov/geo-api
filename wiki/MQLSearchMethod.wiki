@@ -1,0 +1,117 @@
+#summary MQL Search Method
+
+=MQL search=
+
+Method to search entities using the [http://www.freebase.com/view/en/documentation Metaweb Query Language] (MQL). This is the more powerful way to search for entities, as it allows developers to express constraints on properties of entities, *including values contained in views*.
+
+*Getting Started*: We recommend that you first take a look at the [http://download.freebase.com/MQLReferenceGuide.pdf MQL Reference Guide] and [http://download.freebase.com/MQLcheatsheet-081208.pdf MQL Cheat Sheet] to get an idea of how MQL works.
+
+==Supported MQL operators==
+===[http://mql.freebaseapps.com/ch03.html#operators equality]===
+{{{"name": "Tartine"}}} name is required to be equal to "Tartine".
+===[http://mql.freebaseapps.com/ch03.html#butnotoperator inequality (but not operator)]===
+{{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
+===[http://mql.freebaseapps.com/ch03.html#matchsyntax prefix]===
+{{{"name^=": "The"}}} name is required to start with "The". 
+*Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
+
+==URL==
+
+{{{
+http://api.townme.com/v1/search
+}}}
+
+==Parameters==
+
+  * GlobalParameters
+  * *q*: 
+    * Required. 
+    * Description: MQL query specifying search constraints. 
+    * Format: MQL syntax (examples below)
+
+
+==General Idea==
+The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify fields you want to constrain by setting their values and fields that you want to be returned by specifying their values as 'null'. 
+
+For example, to express that you want the names and prices of all menu items that are of type 'desert', you could have the following:
+{{{
+{
+  "menu_item": [{
+    "name": null,
+    "price": null,
+    "type": "desert"
+  }]
+}
+}}}
+
+Geo search queries follow the pattern below:
+{{{
+{
+  "lat": <lat>,
+  "lon": <lon>,
+  "radius": <radius>,
+  "entity": [{
+    <entity_field_1>,
+    <entity_field_2>,
+    ...,
+    "view.<view_name>": {
+      <view_field_1>,
+      <view_field_2>,
+      ...
+    }
+  }]
+}
+}}}
+
+==Examples==
+
+Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parametrizes the entire query.
+
+*query* 
+{{{
+{
+  "lat": 37.75629
+  "lon": -122.4213
+  "radius": "0.2km"
+  "entity": [{
+    "guid": null
+    "type": "business"
+    "view.listing": {
+      "a:verticals": "restaurants"
+      "b:verticals": "food-and-drink:coffee-houses"
+      "address": []
+      "name": null
+    }
+  }]
+}
+}}}
+
+*response*
+{{{
+
+}}}
+
+==Usage Notes==
+
+  * results are sorted by distance relative to the specified lat/lon
+  * a maximum of 100 results will be returned
+  * the maximum radius is 1km - anything above that will be treated as 1km
+
+==Supported distance units==
+
+|| unit || abbreviation ||
+|| foot || ft ||
+|| kilometer || km ||
+|| meter || m ||
+|| mile || mi ||
+|| yard || yd ||
+
+__Below are some other distance units we support for fun. No guarantees about them working long-term, but we figured we'd try to make pirates, Brits, Indians, astronomers, statisticians and MIT students feel at home :).__
+
+|| unit || abbreviation ||
+|| British foot || british_ft ||
+|| Indian yard || indian_yd ||
+|| Nautical Mile || nm ||
+|| US survey foot || survey_ft ||
+|| Attoparsecs || attoparsec ||
+|| Smoot || smoot ||
