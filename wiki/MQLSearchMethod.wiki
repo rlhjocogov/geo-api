@@ -43,6 +43,7 @@ Geo search queries follow the pattern below:
   "lat": <lat>,
   "lon": <lon>,
   "radius": <radius>,
+  "limit": <limit>,
   "entity": [{
     <entity_attribute_1>,
     <entity_attribute_2>,
@@ -69,6 +70,10 @@ Geo search queries follow the pattern below:
     * Required. 
     * Description: Search radius. 
     * Format: Floating point number followed by unit abbreviation (ex. 0.1km). Supported units listed below. The default radius is 500m and the maximum radius is 1km (2km if you constrain type to POI).
+  * {{{<limit>}}}: 
+    * Optional. 
+    * Description: Max number of results to return.
+    * Format: Positive integer. Default is 10 and maximum is 100.
   * {{{<entity_attribute>}}}
     * Optional
     * Description: Any number of entity attributes. Specifying a value for an attribute constrains the search. Specifying a {{{null}}} value causes the attribute to be returned.
