@@ -94,7 +94,8 @@ _Properties can be constrained using several standard MQL operators. They way yo
   * *inequality* (but not operator) - [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
     * {{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
   * *prefix* - [http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
-    * {{{"name^=": "The"}}} name is required to start with "The". *Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
+    * {{{"name^=": "The"}}} name is required to start with "The".
+    * *Note that our syntax here is slightly different than MQL - instead of having a regex operator, we have an explicit prefix operator (^).*
 *IMPORTANT NOTE*: You can constrain results *only* based on indexed properties. At this time, the indexed properties are:
   * view.listing/name
   * view.listing/verticals
