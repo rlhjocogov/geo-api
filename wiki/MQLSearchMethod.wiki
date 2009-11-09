@@ -10,7 +10,7 @@ Method to search entities using the [http://www.freebase.com/view/en/documentati
 ==URL==
 
 {{{
-http://api.townme.com/v1/search
+http://api.townme.com/v1/q
 }}}
 
 ==Parameters==
