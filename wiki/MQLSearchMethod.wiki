@@ -91,7 +91,7 @@ Geo search queries follow the pattern below:
 _Properties can be constrained using several standard MQL operators. They way you constrain a property (i.e. filter by a specific value) is by specifying that property and the value by which you want it filtered. The list of supported operators are below._
   * *equality* - [http://mql.freebaseapps.com/ch03.html#operators MQL doc]
     * ex: {{{"name": "Tartine"}}} name is required to be equal to "Tartine".
-  * *inequality* (but not operator) - [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
+  * *inequality* ("but not" operator) - [http://mql.freebaseapps.com/ch03.html#butnotoperator MQL doc]
     * {{{"name!=":"Tartine"}}} name can be anything but "Tartine" (including null).
   * *prefix* - [http://mql.freebaseapps.com/ch03.html#matchsyntax MQL doc]
     * {{{"name^=": "The"}}} name is required to start with "The".
