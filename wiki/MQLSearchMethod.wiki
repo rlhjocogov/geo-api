@@ -25,13 +25,13 @@ http://api.townme.com/v1/search
 ==General Idea==
 The idea behind the MQL search interface is that you provide a query in similar format as the response, where you specify properties you want to constrain by setting their values and properties that you want to be returned by specifying their values as 'null'. 
 
-For example, to express that you want the names and prices of all menu items that are of type 'desert', you could have the following:
+For example, to express that you want the names and prices of all menu items that are of type 'dessert', you could have the following:
 {{{
 {
   "menu_item": [{
     "name": null,
     "price": null,
-    "type": "desert"
+    "type": "dessert"
   }]
 }
 }}}
@@ -76,7 +76,7 @@ Geo search queries follow the pattern below:
     * Format: Positive integer. Default is 10 and maximum is 100.
   * {{{<entity_property>}}}
     * Optional
-    * Description: Any number of entity property. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
+    * Description: Any number of entity properties. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
     * Format: The full list of property is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
   * {{{<view_name>}}}
     * Optional
@@ -84,7 +84,7 @@ Geo search queries follow the pattern below:
     * Format: Name of a view. Currently supported views are 'listing' and user-defined views.
   * {{{<view_property>}}}
     * Optional
-    * Description: Any number of view property. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
+    * Description: Any number of view properties. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
     * Format: Valid property names for the specified view. For example, for the 'listing' view, the possible properties can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
 
 ==Constraining Properties==
@@ -111,7 +111,7 @@ _Properties can be requested (from entities or views) by specifying the property
  
 ==Examples==
 
-Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parametrizes the entire query.
+Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parameterizes the entire query.
 
 *query* 
 {{{
