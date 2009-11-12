@@ -1,13 +1,13 @@
-= Data Sources Used by !TownMe =
+= Data Sources Used by the GeoAPI =
 
-TownMe uses a variety of data sources in this API.  Some of these sources we have attributed below, while others we either paid for or otherwise didn't make sense for us to attribute.  
+The GeoAPI uses a variety of data sources.  A subset of sources require attribution and are listed below.  
 
 We have also done some pretty heavy duty cleaning of much of the data.  This does not mean the data is by any means perfect (in fact, much of it is still quite messy!)
 
-If you see any errors, or have suggestions for good data sources to use, please contact us at "api _at_ townme _dot_ com"
+If you see any errors, or have suggestions for good data sources to use, please contact us at "api _at_ geoapi_dot_ com"
 
 
-= Subset of Sources With Attribution =
+= Subset of Sources Used =
 
   * [http://www.localeze.com Localeze business listing data]
   * [http://www.townme.com TownMe.com aggregation data]
@@ -15,7 +15,4 @@ If you see any errors, or have suggestions for good data sources to use, please 
   * [http://developer.yahoo.com/geo/ Yahoo! GeoPlanet(TM) data]
   * [http://www.zillow.com Zillow neighborhood data]
 
-= Additional Sources =
-There are a number of additional data sets we paid for or which otherwise we can not attribute here.  
-
-If you have suggestions for data you think should be added to the API, please contact us at "api _at_ townme _dot_ com"
+If you have suggestions for data you think should be added to the API, please contact us at "api _at_ geoapi_dot_ com"
