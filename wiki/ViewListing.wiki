@@ -6,7 +6,7 @@ Business listing information
 * business
 
 ==url==
-http://api.townme.com/v1/e/<guid>/view/listing
+{{{http://api.townme.com/v1/e/<guid>/view/listing}}}
 
 
 ==properties==
