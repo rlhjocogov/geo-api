@@ -1,0 +1,35 @@
+A:link {text-decoration: none; color: #69f}
+A:visited {text-decoration: none; color: #69f}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: #69f;}
+
+h3 {
+    font-weight:normal
+}
+
+body {
+    font-family:verdana,arial,sans-serif
+}
+
+.selected_neighborhood {
+    background-color:#fe9;
+}
+
+.neighborhood {
+    text-color:#00a;
+}
+
+.tweet {
+    vertical-align: top;
+    font-size: smaller;
+}
+
+.tweetimage {
+    float:left;
+    margin-right:3px;
+}
+
+.maptweet {
+    width: 300px;
+    font-size: small;
+}
