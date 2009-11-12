@@ -98,6 +98,10 @@ We wrote a !JavaScript app for mobile devices to let you see businesses nearby b
 This highlights the value of the attribute function of the GeoAPI which allows developers to query the API based on category of business (e.g. thai restaurants) and other attributes.
 
 *How to try it out:*
-  * Go to: COMING SOON :)
+  * On an iPhone 
+  * Go to: http://geoapi.com/demos/wnm/
+  * Allow the page to get your current location
+  * Select a business category
+  * Either select an individual business or view all results on a map
  
-*Source Code:* COMING SOON
+*Source Code:* http://code.google.com/p/geo-api/source/browse/trunk#trunk/demos/wnm
