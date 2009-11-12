@@ -92,6 +92,8 @@ We look at Flickr photos published in the last few DAYS with lat/lon coordinates
 
 We wrote a JavaScript app for mobile devices to let you see businesses nearby by category.  The app automatically grabs your location from iPhone and lets you chose nearest bars, restaurants, parking lots and more.
 
+This highlights the value of the attribute function of the GeoAPI which allows developers to query the API based on category of business (e.g. plumbers) and other attributes.
+
 *How to try it out:*
   * Go to: COMING SOON :)
  
