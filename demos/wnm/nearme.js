@@ -45,7 +45,7 @@ function show_vertical(vertical_index) {
                             var li = '<li onclick="javasript:show_map_entity(\'' + entity.guid + '\')">'+
                                      '<span class="entityName">' + entity.name + '</span> '+
                                      '<br/><span class="entityAddress">' + address[0] + ', ' + address[1] + 
-                                     ' (' + entity['distance-from-center'] + ')</span></li>'
+                                     ' (' + entity['distance-from-origin'] + ')</span></li>'
                             $("#results").append(li)
                           })
                    showPage($("#results")[0])
@@ -201,7 +201,10 @@ function location_query(lat, lon, radius, vertical,
     q = {lat: lat, 
          lon: lon,
          "entity": [{
-             "*": null,
+             "guid": null,
+             "name": null,
+             "geom": null,
+             "distance-from-origin": null,
              "type": "business",
              "view.listing": {
                "*": null
