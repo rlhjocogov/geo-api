@@ -1,4 +1,4 @@
-#summary Some sample queries to get an idea of how the TownMe GeoAPI works
+#summary Some sample queries to get an idea of how the GeoAPI works
 
 =Search from a lat,lon=
 
