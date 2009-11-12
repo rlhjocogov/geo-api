@@ -10,7 +10,7 @@ Method to search entities using the [http://www.freebase.com/view/en/documentati
 ==URL==
 
 {{{
-http://api.townme.com/v1/q
+http://api.geoapi.com/v1/q
 }}}
 
 ==Parameters==
@@ -77,7 +77,7 @@ Geo search queries follow the pattern below:
   * {{{<entity_property>}}}
     * Optional
     * Description: Any number of entity properties. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
-    * Format: The full list of property is listed at the root url of an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
+    * Format: The full list of property is listed at the root url of an entity (ex. [http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110?apikey=demo&pretty=1 http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110]). 
   * {{{<view_name>}}}
     * Optional
     * Description: Specifying a view allows you to filter based on its values and/or get back those values for returned entities. 
@@ -85,7 +85,7 @@ Geo search queries follow the pattern below:
   * {{{<view_property>}}}
     * Optional
     * Description: Any number of view properties. Specifying a value for an property constrains the search. Specifying a {{{null}}} value causes the property to be returned.
-    * Format: Valid property names for the specified view. For example, for the 'listing' view, the possible properties can be seen on the view results for an entity (ex. [http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
+    * Format: Valid property names for the specified view. For example, for the 'listing' view, the possible properties can be seen on the view results for an entity (ex. [http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1 http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing])
 
 ==Constraining Properties==
 _Properties can be constrained using several standard MQL operators. They way you constrain a property (i.e. filter by a specific value) is by specifying that property and the value by which you want it filtered. The list of supported operators are below._
@@ -115,9 +115,9 @@ _Properties can be requested (from entities or views) by specifying the property
  
 ==Examples==
 
-You can experiment with different queries using our handy [http://api.townme.com/demos/mql_tool/query.html query tool] (which is also a demo).
+You can experiment with different queries using our handy [http://api.geoapi.com/demos/mql_tool/query.html query tool] (which is also a demo).
 
-Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parameterizes the entire query.
+Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.geoapi.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parameterizes the entire query.
 
 ===Radius search for businesses that are both restaurants and coffee houses, with only some properties requested===
 *query* 
