@@ -115,8 +115,11 @@ _Properties can be requested (from entities or views) by specifying the property
  
 ==Examples==
 
+You can experiment with different queries using our handy [http://api.townme.com/demos/mql_tool/query.html query tool] (which is also a demo).
+
 Below are several examples of MQL queries. Note that the queries are of the following format: {{{http://api.townme.com/v1/search?&apikey=demo&q=<query>}}}, however in the examples below, we'll only be showing the 'q' parameter, as that parameterizes the entire query.
 
+===Radius search for businesses that are both restaurants and coffee houses, with only some properties requested===
 *query* 
 {{{
 {
@@ -136,9 +139,194 @@ Below are several examples of MQL queries. Note that the queries are of the foll
 }
 }}}
 
+
 *response*
 {{{
+{
+  "lat":37.75629,
+  "lon":-122.4213,
+  "radius":"0.2km",
+  "entity":[{
+      "view.listing":{
+        "address":["1026 Valencia St",
+          "San Francisco",
+          "94110"
+        ],
+        "name":"Ritual Coffee Roasters",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "a:verticals":"restaurants"
+      },
+      "guid":"ritual-coffee-roasters-san-francisco-ca-94110",
+      "type":"business"
+    },
+    {
+      "view.listing":{
+        "address":["968 Valencia St",
+          "San Francisco",
+          "94110"
+        ],
+        "name":"The Creek Cafe",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "a:verticals":"restaurants"
+      },
+      "guid":"the-creek-cafe-san-francisco-ca-94110",
+      "type":"business"
+    },
+    {
+      "view.listing":{
+        "address":["1109 Valencia St",
+          "San Francisco",
+          "94110"
+        ],
+        "name":"Cafe Valencia",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "a:verticals":"restaurants"
+      },
+      "guid":"cafe-valencia-san-francisco-ca-94110",
+      "type":"business"
+    },
+    {
+      "view.listing":{
+        "address":["3248 22nd St",
+          "San Francisco",
+          "94110"
+        ],
+        "name":"Revolution Cafe",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "a:verticals":"restaurants"
+      },
+      "guid":"revolution-cafe-san-francisco-ca-94110",
+      "type":"business"
+    },
+    {
+      "view.listing":{
+        "address":["3239 22nd St",
+          "San Francisco",
+          "94110"
+        ],
+        "name":"La Altena Market & Cafe",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "a:verticals":"restaurants"
+      },
+      "guid":"la-altena-market-and-cafe-san-francisco-ca-94110",
+      "type":"business"
+    }
+  ]
+}
+}}}
 
+===Radius search for businesses that are both restaurants and coffee houses, with all of the listing view data===
+*query* 
+{{{
+{
+  "lat": 37.75629
+  "lon": -122.4213
+  "radius": "0.2km"
+  "entity": [{
+    "guid": null
+    "type": "business"
+    "view.listing": {
+      "a:verticals": "restaurants"
+      "b:verticals": "food-and-drink:coffee-houses"
+      "*": null
+    }
+  }]
+}
+}}}
+
+
+*response*
+{{{
+{
+  "lat":37.75629,
+  "lon":-122.4213,
+  "radius":"0.2km",
+  "entity":[{
+      "view.listing":{
+        "hours":[["Mon to Fri",
+            "6:00am to 10:00pm",
+            ""
+          ],
+          ["Sat",
+            "7:00am to 10:00pm",
+            ""
+          ],
+          ["Sun",
+            "7:00am to 9:00pm",
+            ""
+          ]
+        ],
+        "web-wide-rating":4,
+        "features":["Credit Card OK",
+          "Price: Cheap"
+        ],
+        "chain":null,
+        "address":["1026 Valencia St",
+          "San Francisco",
+          "94110"
+        ],
+        "canonical-url":"http://www.townme.com/ritual-coffee-roasters-san-francisco-ca-94110",
+        "verticals":["food-and-drink:coffee-houses",
+          "restaurants"
+        ],
+        "phone":"(415) 641-1024",
+        "a:verticals":"restaurants",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "sips":["soy latte",
+          "espresso",
+          "hipsters",
+          "blue bottle",
+          "mission",
+          "coffee shop",
+          "baristas",
+          "cappuccino",
+          "outlets",
+          "foam"
+        ],
+        "listing-url":"http://www.ritualroasters.com",
+        "name":"Ritual Coffee Roasters"
+      },
+      "guid":"ritual-coffee-roasters-san-francisco-ca-94110",
+      "type":"business"
+    },
+    {
+      "view.listing":{
+        "hours":null,
+        "web-wide-rating":3.5,
+        "features":["Credit Card OK",
+          "Outdoor Seating",
+          "Price: Cheap"
+        ],
+        "chain":null,
+        "address":["968 Valencia St",
+          "San Francisco",
+          "94110"
+        ],
+        "canonical-url":"http://www.townme.com/the-creek-cafe-san-francisco-ca-94110",
+        "verticals":["food-and-drink:coffee-houses",
+          "restaurants"
+        ],
+        "phone":"(415) 641-0888",
+        "a:verticals":"restaurants",
+        "b:verticals":"food-and-drink:coffee-houses",
+        "sips":["ritual",
+          "power outlets",
+          "laptop",
+          "free wifi",
+          "bagel",
+          "mission",
+          "wireless",
+          "study",
+          "coffee shop",
+          "plugs"
+        ],
+        "listing-url":null,
+        "name":"The Creek Cafe"
+      },
+      "guid":"the-creek-cafe-san-francisco-ca-94110",
+      "type":"business"
+    },
+...
 }}}
 
 ==Usage Notes==
