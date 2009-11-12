@@ -5,10 +5,10 @@
 ==URL==
 
 {{{
-http://api.townme.com/v1/e/<guid>/view/<view>
+http://api.geoapi.com/v1/e/<guid>/view/<view>
 }}}
-`<guid>: Any valid TownMe guid`
-`<view>: A valid TownMe view for the given guid.` ([KeyConcepts#Views currently supported views])
+`<guid>: Any valid GeoAPI guid`
+`<view>: A valid GeoAPI view for the given guid.` ([KeyConcepts#Views currently supported views])
 
 ==Parameters==
 
@@ -18,7 +18,7 @@ http://api.townme.com/v1/e/<guid>/view/<view>
 
 *query*
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1
+http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1
 }}}
 
 *response*
@@ -90,7 +90,7 @@ http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/li
 You can write data to a custom view by POST'ing information to a named view of any entity (the view is associated with your API key, and not viewable or writable with other API keys). For example, if you have a custom view called 'monsters-in-town' and you want to associate information about a monster in Ritual Roasters, you would POST to
 
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo
+http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo
 }}}
  with some data - for example:
 {{{
@@ -107,7 +107,7 @@ Writing to a view overwrites its contents. You can fetch a view like any system 
 The API also supports GET for writing to a view using the "set-content" parameter. Example:
 
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo&set-content=I%20like%20coffee
+http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo&set-content=I%20like%20coffee
 }}}
  
 
