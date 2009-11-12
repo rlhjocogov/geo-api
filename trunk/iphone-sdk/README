@@ -1,0 +1,14 @@
+GeoAPI iPhone SDK
+
+INSTALLATION:
+
+To use the GeoAPI library in your project, simply add the
+Classes/GeoAPI folder to your XCode project.  If you don't already
+have the JSON library, you will also need to add Classes/JSON to your
+project.  See the GeoAPIDemo project for an example of how to use the
+library.
+
+DOCUMENTATION:
+
+You can find class documentation in the docs/ folder.  See
+http://www.geoapi.com/ for the full API specification.
