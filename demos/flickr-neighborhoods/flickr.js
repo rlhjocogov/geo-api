@@ -97,7 +97,7 @@ function requestPhotosForCurrentNeighborhood() {
     _listings = [];
     _apikey = $("#apikey").val();
 
-    $.getJSON("http://api.geoapi.com/e/" + escape(_guid) +
+    $.getJSON("http://api.geoapi.com/v1/e/" + escape(_guid) +
 	      "/view/flickr?apikey=" + escape(_apikey) +
 	      "&jsoncallback=?",
 	      showPhotos);

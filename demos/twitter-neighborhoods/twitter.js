@@ -97,7 +97,7 @@ function requestTweetsForCurrentNeighborhood() {
     _listings = [];
     _apikey = $("#apikey").val();
 
-    $.getJSON("http://api.geoapi.com/e/" + escape(_guid) +
+    $.getJSON("http://api.geoapi.com/v1/e/" + escape(_guid) +
 	      "/view/twitter?apikey=" + escape(_apikey) +
 	      "&jsoncallback=?",
 	      showTweets);
