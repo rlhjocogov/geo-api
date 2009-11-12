@@ -613,28 +613,3 @@ Below are several examples of MQL queries. Note that the queries are of the foll
   ]
 }
 }}}
-
-==Usage Notes==
-
-  * results are sorted by distance relative to the specified lat/lon
-  * a maximum of 100 results will be returned
-  * the maximum radius is 1km - anything above that will be treated as 1km
-
-==Supported distance units==
-
-|| unit || abbreviation ||
-|| foot || ft ||
-|| kilometer || km ||
-|| meter || m ||
-|| mile || mi ||
-|| yard || yd ||
-
-__Below are some other distance units we support for fun. No guarantees about them working long-term, but we figured we'd try to make pirates, Brits, Indians, astronomers, statisticians and MIT students feel at home :).__
-
-|| unit || abbreviation ||
-|| British foot || british_ft ||
-|| Indian yard || indian_yd ||
-|| Nautical Mile || nm ||
-|| US survey foot || survey_ft ||
-|| Attoparsecs || attoparsec ||
-|| Smoot || smoot ||
