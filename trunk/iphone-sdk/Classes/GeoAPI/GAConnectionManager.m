@@ -22,7 +22,7 @@ __LINE__, \
 @implementation GAConnectionManager
 
 NSString *const kGAQueryFormat =
-  @"http://api.geoapi.com/v1/search?apikey=%@&q=%@";
+  @"http://api.geoapi.com/v1/q?apikey=%@&q=%@";
 NSString *const kGASearchFormat = @"http://api.geoapi.com/v1/search?apikey=%@&"
   "lat=%f&lon=%f&radius=%dm&limit=%d";
 NSString *const kGAUserViewFormat =
