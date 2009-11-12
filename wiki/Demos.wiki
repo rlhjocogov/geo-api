@@ -84,9 +84,12 @@ In this demo you can restrict a tweet stream by neighborhood polygons. This allo
 We look at Flickr photos published in the last few DAYS with lat/lon coordinates. We map these coordinates to neighborhoods, and only show photos that fall within a given neighborhood boundary.  Sometimes the photos are scarce since we only display photos from a handful of days.
 
 *How to try it out:*
-  * Go to: COMING SOON :)
+  * Twitter demo: http://geoapi.com/demos/twitter-neighborhoods/
+  * Flickr demo: http://geoapi.com/demos/flickr-neighborhoods/
  
-*Source Code:* COMING SOON
+*Source Code:*
+  * Twitter demo: http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-neighborhoods
+  * Flickr demo: http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/flickr-neighborhoods
 
 =Demo 5: What's Near Me?=
 
