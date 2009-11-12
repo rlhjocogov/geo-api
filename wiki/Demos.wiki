@@ -13,7 +13,7 @@ This means anyone can now much more easily write either (a) a location broadcast
 This is an all javascript demo from the developer perspective.  We are not only *reading* locations from the API, but also literally *writing* information onto the GeoAPI servers to the unique virtual overlay or layer each API key comes with.  This is a unique aspect of this API - the ability to write your own virtual overlay of the world (or at least the parts of the world we currently support)
 
 *How to try it out:*
-  * Go to: http://api.townme.com/demos/checkin-stream/checkin.html
+  * Go to: http://geoapi.com/demos/checkin-stream/checkin.html
   * Click on a location on the map.  A set of nearby POI/businesses will populate.  
   * Click on the link for any of these points and add a comment.  
   * Click on "Check-ins Nearby" page and click on the map to see nearby checkins/comments that have occurred.
@@ -32,7 +32,7 @@ In this demo, we take a live stream of tweets and do location lookups based on t
 So you can see that someone tweeted from "Near Dolores Park / Mission District / San Francisco" instead of "37.7600, -122.4270".  This is a cool way to get "real location" context for real time information.
 
 *How to try it out:*
-  * Go to: http://api.townme.com/demos/twitter-nearby/
+  * Go to: http://geoapi.com/demos/twitter-nearby/
   * Select your location on the map (note for iPhone users below)
   * A stream of nearby tweets annotated by location will start showing (location annotations in red) 
 
@@ -62,8 +62,8 @@ The Greasemonkey script converts a lat/lons on Twitter to "real location".  So t
 *How to try it out:*
   * *You can only use Firefox for this demo* due to the dependency on [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
   * Install [https://addons.mozilla.org/en-US/firefox/addon/748 Greasemonkey]
-  * Install the user script at [http://api.townme.com/demos/twitter-greasemonkey/twitter-local.user.js].
-  * Go to: http://twitter.com/townmedemo (notice names of businesses are linked) on *Firefox*
+  * Install the user script at [http://geoapi.com/demos/twitter-greasemonkey/twitter-local.user.js].
+  * Go to: http://twitter.com/geoapidemo (notice names of businesses are linked) on *Firefox*
   * Go to: http://search.twitter.com/search?q=+near%3A%22san+francisco%22+within%3A5mi (notice points of interest in *_red_*)
 
 *Source Code:* http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-greasemonkey
