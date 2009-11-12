@@ -33,7 +33,6 @@ NSString *const kGoodNonCoffeehouseRestaurantsQuery =
   "     \"view.listing\": {"
   "       \"verticals\": \"restaurants\","
   "       \"verticals!=\": \"food-and-drink:coffee-houses\","
-//  "       \"web-wide-rating>\": 4,"  XXX: uncomment this when server is ready.
   "       \"web-wide-rating\": null,"
   "       \"address\": [],"
   "       \"name\": null"
@@ -83,7 +82,7 @@ NSString *const kGoodNonCoffeehouseRestaurantsQuery =
   } else if (requestType_ == kListingForPlace) {
     [connectionManager_ requestListingForPlace:guid];
   } else if (requestType_ == kWriteUserView) {
-    [connectionManager_ writeString:@"foo" toView:@"apidemo" forPlace:guid];
+    [connectionManager_ writeString:@"{\"foo\": \"bar\"}" toView:@"apidemo" forPlace:guid];
   } else if (requestType_ == kReadUserView) {
     [connectionManager_ requestStringFromView:@"apidemo" forPlace:guid];
   } else if (requestType_ == kExecuteQuery) {
