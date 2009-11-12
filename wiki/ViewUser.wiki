@@ -33,7 +33,8 @@ http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/uservie
 }
 }}}
  you would have:
-{{{{
+{{{
+{
  "query": {
    "params": {
      "userview": "bar",
