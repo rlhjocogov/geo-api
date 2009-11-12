@@ -78,6 +78,11 @@ This demo highlights the new media layers we have added to the GeoAPI. We make i
 
 In this demo you can restrict a tweet stream by neighborhood polygons. This allows you to view e.g. all the Tweets in the Mission District, or Flickr photos from SOMA, in San Francisco.
 
+*Tweets:* Only a subset of Tweets currently have lat/lon coordinates. We map these coordinates to neighborhoods, and only show Tweets that fall within a given neighborhood boundary.  We automatically refresh the screen every 30 seconds.
+
+*Flickr Photos:*
+We look at Flickr photos published in the last few DAYS with lat/lon coordinates. We map these coordinates to neighborhoods, and only show photos that fall within a given neighborhood boundary.  Sometimes the photos are scarce since we only display photos from a handful of days.
+
 *How to try it out:*
   * Go to: COMING SOON :)
  
