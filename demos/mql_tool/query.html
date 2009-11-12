@@ -80,7 +80,7 @@
   </body>
   <script>
     $("a#doit").click(function() {
-      var root = 'http://api.townme.com/v1'
+      var root = 'http://api.geoapi.com/v1'
 
       var url = root + '/q?apikey=demo&q=' + escape($("#the_input").val())
       $.getJSON(url + '&jsoncallback=?', function(data) {
