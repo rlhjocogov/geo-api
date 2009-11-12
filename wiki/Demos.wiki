@@ -91,6 +91,9 @@ We look at Flickr photos published in the last few DAYS with lat/lon coordinates
   * Twitter demo: http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/twitter-neighborhoods
   * Flickr demo: http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/flickr-neighborhoods
 
+http://blog-media.townme.com.s3.amazonaws.com/Flickrbyhood.png
+http://blog-media.townme.com.s3.amazonaws.com/Tweetsbyhood.png
+
 =Demo 5: What's Near Me?=
 
 We wrote a !JavaScript app for mobile devices to let you see businesses nearby by category.  The app automatically grabs your location from iPhone and lets you chose nearest bars, restaurants, parking lots and more.
@@ -98,10 +101,12 @@ We wrote a !JavaScript app for mobile devices to let you see businesses nearby b
 This highlights the value of the attribute function of the GeoAPI which allows developers to query the API based on category of business (e.g. thai restaurants) and other attributes.
 
 *How to try it out:*
-  * On an iPhone 
+  * On to an iPhone 
   * Go to: http://geoapi.com/demos/wnm/
   * Allow the page to get your current location
   * Select a business category
   * Either select an individual business or view all results on a map
  
+http://blog-media.townme.com.s3.amazonaws.com/WNM.jpg
+
 *Source Code:* http://code.google.com/p/geo-api/source/browse/trunk#trunk/demos/wnm
