@@ -21,7 +21,7 @@ Important details about writing to a userview:
 For example, if you have a custom view called 'monsters-in-town' and you want to associate information about a monster in Ritual Roasters, you would POST to
 
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo
+http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/userview/monsters-in-town?apikey=demo
 }}}
  with some data - for example:
 {{{
