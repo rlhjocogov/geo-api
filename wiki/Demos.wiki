@@ -92,6 +92,7 @@ We look at Flickr photos published in the last few DAYS with lat/lon coordinates
   * Flickr demo: http://code.google.com/p/geo-api/source/browse/#svn/trunk/demos/flickr-neighborhoods
 
 http://blog-media.townme.com.s3.amazonaws.com/Flickrbyhood.png
+---
 http://blog-media.townme.com.s3.amazonaws.com/Tweetsbyhood.png
 
 =Demo 5: What's Near Me?=
