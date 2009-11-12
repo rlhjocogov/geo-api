@@ -7,7 +7,7 @@ Method to find the parents of a specific points (ex. point (x, y) is in Mission 
 ==URL==
 
 {{{
-http://api.townme.com/v1/parents
+http://api.geoapi.com/v1/parents
 }}}
 
 ==Parameters==
@@ -26,7 +26,7 @@ http://api.townme.com/v1/parents
 
 *query*
 {{{
-http://api.townme.com/v1/parents?lat=37.563474999999997&lon=-122.32321899999999&apikey=demo&pretty=1
+http://api.geoapi.com/v1/parents?lat=37.563474999999997&lon=-122.32321899999999&apikey=demo&pretty=1
 }}}
 
 *response*
@@ -79,9 +79,9 @@ Method to find the parents of a specific points (ex. Ritual Roasters is in Missi
 ==URL==
 
 {{{
-http://api.townme.com/v1/e/<guid>/parents
+http://api.geoapi.com/v1/e/<guid>/parents
 }}}
-`<guid>: Any valid TownMe guid`
+`<guid>: Any valid GeoAPI guid`
 
 ==Parameters==
 
@@ -91,7 +91,7 @@ http://api.townme.com/v1/e/<guid>/parents
 
 *query*
 {{{
-http://api.townme.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/parents?apikey=demo&pretty=1
+http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/parents?apikey=demo&pretty=1
 }}}
 
 *response*
