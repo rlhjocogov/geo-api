@@ -17,6 +17,7 @@ The currently supported list of entity types are:
 ||neighborhood || US neighborhoods ||
 || business || 16+ million US businesses ||
 || POI || various points of interest such as the Golden Gate Bridge ||
+|| intersections || millions of intersections ||
 
 
 =Views=
