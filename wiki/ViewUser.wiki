@@ -1,6 +1,6 @@
 #summary Views in the private namespace for each developer
 
-UserViews work exactly like regular views such as listing. However, they are in a private namespace, which allows developers to annotate any entity with their own data. Developers can write data to a custom view by POST'ing information (in JSON format) to a named view of any entity (the view is associated with an API key, and not viewable or writable with other API keys). 
+User Views work exactly like regular views such as listing. However, they are in a private namespace, which allows developers to annotate any entity with their own data. Developers can write data to a custom view by POST'ing information (in JSON format) to a named view of any entity (the view is associated with an API key, and not viewable or writable with other API keys). 
 
 ==entity types==
   * all entities
