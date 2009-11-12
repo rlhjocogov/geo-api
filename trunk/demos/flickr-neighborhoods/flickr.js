@@ -14,7 +14,6 @@ google.load("jquery", "1.3.1");
 
 var NEIGHBORHOODS = [
     [ 'castro-upper-market-san-francisco-ca', "Castro-Upper Market"],
-    [ 'chinatown-san-francisco-ca', "Chinatown"],
     [ 'downtown-san-francisco-ca', "Downtown"],
     [ 'financial-district-san-francisco-ca', "Financial District"],
     [ 'haight-ashbury-san-francisco-ca', "Haight-Ashbury"],
@@ -23,7 +22,6 @@ var NEIGHBORHOODS = [
     [ 'north-beach-san-francisco-ca', "North Beach"],
     [ 'outer-richmond-san-francisco-ca', "Outer Richmond"],
     [ 'outer-sunset-san-francisco-ca', "Outer Sunset"],
-    [ 'presidio-heights-san-francisco-ca', "Presidio Heights"],
     [ 'south-of-market-san-francisco-ca', "South Of Market"],
 ];
 
