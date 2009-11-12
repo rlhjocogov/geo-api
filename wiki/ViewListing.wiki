@@ -1,7 +1,7 @@
 #summary Business listing information
 
 ==entity types==
-* business
+  * business
 
 ==url==
 {{{http://api.townme.com/v1/e/<guid>/view/listing}}}
