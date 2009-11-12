@@ -5,7 +5,7 @@
   * neighborhoods
   * business
 
-*note*: for entities that are defined as a point (instead of a polygon), the API returns Flickr photos within a mile.
+*note*: for entities that are defined as a point (instead of a polygon), the API returns Flickr photos within 1 km.
 
 ==url==
 {{{http://api.geoapi.com/v1/e/<guid>/view/twitter}}}
