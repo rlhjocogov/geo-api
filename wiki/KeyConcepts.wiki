@@ -1,6 +1,6 @@
-#summary Key concepts behind the TownMe GeoAPI: Entities and Views
+#summary Key concepts behind the Mixer Labs GeoAPI: Entities and Views
 
-*The !TownMe GeoAPI exposes data in two ways: entities and views*
+*The GeoAPI exposes data in two ways: entities and views*
 
 =Entities=
 
