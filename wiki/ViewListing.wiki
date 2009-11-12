@@ -1,6 +1,4 @@
-#summary Business Listing Views.
-
-Business listing information
+#summary Business listing information
 
 ==entity types==
 * business
