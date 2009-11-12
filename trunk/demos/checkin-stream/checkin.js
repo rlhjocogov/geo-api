@@ -58,7 +58,7 @@ function updateStatus(status) {
 
 // Get parent locations (neighborhood, city, etc).
 function getParents() {
-    $.getJSON("http://api.townme.com/v1/parents" +
+    $.getJSON("http://api.geoapi.com/v1/parents" +
 	      "?apikey=" + escape(_apikey) +
 	      "&lat=" + escape(_lat) +
 	      "&lon=" + escape(_lon) +
@@ -140,7 +140,7 @@ function searchWithLatLon() {
 
     getParents();
 
-    $.getJSON("http://api.townme.com/v1/search" +
+    $.getJSON("http://api.geoapi.com/v1/search" +
 	      "?apikey=" + escape(_apikey) +
 	      "&lat=" + escape(_lat) +
 	      "&lon=" + escape(_lon) +
@@ -215,7 +215,7 @@ function displayCheckins(status) {
 	    if (comments[i]) {
 		$("#results").append(
 		    '<tr><td class="poi">' +
-			'<a href="http://www.townme.com/' + guid + '">' +
+			'<a href="http://geoapi.com/e/' + guid + '">' +
 			escapeHTML(name) + '</a></td><td class="comment">' +
 			escapeHTML(comments[i]) + '</td></tr>');
 	    }
@@ -266,7 +266,7 @@ function selectEntity(guid) {
 // Requests comments for a point of interest.
 function getComments(guid) {
     // The callback is called by loadComments as callback(guid).
-    req = $.getJSON("http://api.townme.com/v1/e/" + guid +
+    req = $.getJSON("http://api.geoapi.com/v1/e/" + guid +
 		    "/userview/" + _userview + "?apikey=" + _apikey +
 		    "&jsoncallback=?",
 		    loadComments);
@@ -284,7 +284,7 @@ function checkin(guid) {
     var content = {'comments': _listings[guid]['comments']};
     var contentJSON = JSON.stringify(content);
     
-    $.getJSON("http://api.townme.com/v1/e/" + guid +
+    $.getJSON("http://api.geoapi.com/v1/e/" + guid +
 	      "/userview/" + _userview + "?apikey=" + _apikey +
 	      "&set-content=" + escape(contentJSON) +
 	      "&jsoncallback=?",

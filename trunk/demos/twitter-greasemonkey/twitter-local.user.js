@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           twitter-local
-// @namespace      townme.com
+// @namespace      geoapi.com
 // @include        http://twitter.com/*
 // @include        http://search.twitter.com/*
 // @include        https://twitter.com/*
@@ -11,10 +11,10 @@
 var api_cache = {}
 
 // Simple wrapper around a search query
-function townme_location_search(lat, lon, type, radius, include_parents, 
+function geoapi_location_search(lat, lon, type, radius, include_parents, 
                                 limit, callback_fn) {
     // Build the search query
-    var server = 'http://api.townme.com/v1'
+    var server = 'http://api.geoapi.com/v1'
     var url = server + '/search?apikey=demo'
     url += '&lat=' + lat // lat/lon to search from
     url += '&lon=' + lon
@@ -34,9 +34,9 @@ function townme_location_search(lat, lon, type, radius, include_parents,
 }
 
 // Simple wrapper around a parent query
-function townme_parent_search(lat, lon, callback_fn) {
+function geoapi_parent_search(lat, lon, callback_fn) {
     // Build the search query
-    var server = 'http://api.townme.com/v1'
+    var server = 'http://api.geoapi.com/v1'
     var url = server + '/parents?apikey=demo'
     url += '&lat=' + lat // lat/lon to search from
     url += '&lon=' + lon
@@ -75,7 +75,7 @@ function process_call(url, callback_fn) {
 function checkBiz(entry) {
     // Look through tweets on the page and search for text starting with '::'
     // and try to see if a closeby entity matches. To see an example of this,
-    // go to http://twitter.com/townmedemo
+    // go to http://twitter.com/geoapidemo
     var re=/::[\w-]+/g
     // Assume that user is at Ritual Roasters in SF
     var lat = '37.75647'
@@ -89,7 +89,7 @@ function checkBiz(entry) {
                 for (j=0; j < matches.length; j++) {
                     var name = matches[j]
                     var name_re = new RegExp(name.substring(2).replace('-', '\\s'), 'i')                    
-                    townme_location_search(lat, lon, null, '1km', false, 100, // Search for closeby entities
+                    geoapi_location_search(lat, lon, null, '1km', false, 100, // Search for closeby entities
                        function(resp) {
                            if (!resp.result) {
                                return
@@ -101,7 +101,7 @@ function checkBiz(entry) {
                                    node.textContent = text[0]
                                    node.parentNode.insertBefore(document.createTextNode(text[1]), node.nextSibling)
                                    var link = document.createElement("a")
-                                   link.href = 'http://www.townme.com/'+result.guid
+                                   link.href = 'http://geoapi.com/e/'+result.guid
                                    link.setAttribute('alt', result.meta.name)
                                    link.setAttribute('title', result.meta.name)
                                    link.appendChild(document.createTextNode(name.substring(2)))
@@ -124,7 +124,7 @@ function addParents(entry) {
     var re=/(-?\d+\.\d+),(-?\d+\.\d+)/
     var match=re.exec(entry.textContent)
     if (match){
-        townme_parent_search(match[1], match[2], 
+        geoapi_parent_search(match[1], match[2], 
            function(resp) {
                if (!resp.result) {
                    return
@@ -142,7 +142,7 @@ function addParents(entry) {
 
 
 // Get tweets on a user page and link potential business entities. Once you
-// install this script, try going to http://twitter.com/townmedemo
+// install this script, try going to http://twitter.com/geoapidemo
 var statusBodyElems = document.getElementsByClassName('entry-content');
 if (statusBodyElems) {
     for (var i = 0; i < statusBodyElems.length; i++) {
