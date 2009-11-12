@@ -272,7 +272,11 @@ function getComments(guid) {
 		    loadComments);
 
     function loadComments(data) {
-	_listings[guid]['comments'] = data['comments'];
+	var entries = data['result']['entries'];
+	_listings[guid]['comments'] = [];
+	for (var i = 0; i < entries.length; ++i) {
+	    _listings[guid]['comments'].push(entries[i]['data']['comment']);
+	}
 	displayCheckins("Check-Ins:");
     }
 }
@@ -280,8 +284,7 @@ function getComments(guid) {
 // Writes a new checkin comment to the API.
 function checkin(guid) {
     // Append the new comment to the existing comments.
-    _listings[guid]['comments'].push($("#comment").val());
-    var content = {'comments': _listings[guid]['comments']};
+    var content = {'comment': $("#comment").val()};
     var contentJSON = JSON.stringify(content);
     
     $.getJSON("http://api.geoapi.com/v1/e/" + guid +
