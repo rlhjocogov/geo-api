@@ -10,7 +10,7 @@ All your use of the API must follow these requirements, in addition to the [http
 
   * Feel free to (but you are not required to) email "api _at_ geoapi_dot_ com" before you launch anything.  
     * We are happy to comment on how you used the attribution and display requirements (this may work better than us having to ask you to rework the app after the fact if something is wrong).  
-  * When you display information from the GeoAPI, you must display one of the !TownMe logos below so it is clear to the user that the data is from !TownMe.
+  * When you display information from the GeoAPI, you must display one of the GeoAPI logos below so it is clear to the user that the data is from GeoAPI.com.
     * http://blog-media.townme.com.s3.amazonaws.com/large-plain.png
     * http://blog-media.townme.com.s3.amazonaws.com/medium-plain.png
     * http://blog-media.townme.com.s3.amazonaws.com/small-plain.png
@@ -24,7 +24,7 @@ All your use of the API must follow these requirements, in addition to the [http
 
   * Do not modify these logos in any way.
 
-  * Link the logo to http://townme.com (once we have a mobile property we may ask mobile apps to link to there instead)
+  * Link the logo to http://geoapi.com (once we have a mobile property we may ask mobile apps to link to there instead)
 
   * If you are displaying detailed information about a point of interest or listing, you also need to use the link provided in the API response.  Please use the townme.com URLs that are sent via the API as part of this business listing.  If you like, you can write “More”, “Read more…” or “More about this location” or “more about this business” as anchor text for these listings
 
@@ -33,12 +33,12 @@ All your use of the API must follow these requirements, in addition to the [http
 ===Things you are not allowed to do:===
   * Don't cache or store information from the API, or make bulk requests. The API is for user-initiated, real time requests.
 
-  * Don't  use “nofollow” on your links to !TownMe.  Links back to !TownMe need to be followable. 
+  * Don't  use “nofollow” on your links to GeoAPI.com or !TownMe.com.  Links back to either domain need to be followable. 
 
   * Don't modify any of the information from the API (this also includes our logo/graphics).
 
   * Don't violate the other terms of use described in the [http://code.google.com/p/geo-api/wiki/TermsOfUse GeoAPI Terms of Use].
 
-Questions?  Feel free to email us anytime at "api _at_ townme _dot_ com".
+Questions?  Feel free to email us anytime at "api _at_ geoapi_dot_ com".
 
  
