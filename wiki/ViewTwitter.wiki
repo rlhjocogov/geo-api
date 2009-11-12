@@ -8,7 +8,7 @@
 *note*: for entities that are defined as a point (instead of a polygon), the API returns Flickr photos within a mile.
 
 ==url==
-{{{http://api.townme.com/v1/e/<guid>/view/twitter}}}
+{{{http://api.geoapi.com/v1/e/<guid>/view/twitter}}}
 
 
 ==format==
