@@ -71,3 +71,23 @@ The Greasemonkey script converts a lat/lons on Twitter to "real location".  So t
 http://blog-media.townme.com/twitter-neighborhood-demo.png
 
 http://blog-media.townme.com/greasemonkey2_final-small.png
+
+=Demo 4: Media Layers: Tweets and Flickr Photos by Neighborhood=
+
+This demo highlights the new media layers we have added to the GeoAPI. We make it easy for you to see the Tweets, Flickr photos, and other media associated with any polygon stored in our system (e.g. neighborhood, city, parks, etc.) .
+
+In this demo you can restrict a tweet stream by neighborhood polygons. This allows you to view e.g. all the Tweets in the Mission District, or Flickr photos from SOMA, in San Francisco.
+
+*How to try it out:*
+  * Go to: COMING SOON :)
+ 
+*Source Code:* COMING SOON
+
+=Demo 5: What's Near Me?=
+
+We wrote a JavaScript app for mobile devices to let you see businesses nearby by category.  The app automatically grabs your location from iPhone and lets you chose nearest bars, restaurants, parking lots and more.
+
+*How to try it out:*
+  * Go to: COMING SOON :)
+ 
+*Source Code:* COMING SOON
