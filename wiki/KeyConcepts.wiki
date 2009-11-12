@@ -1,4 +1,4 @@
-#summary Key concepts behind the Mixer Labs GeoAPI: Entities and Views
+#summary Key concepts behind the MixerLabs GeoAPI: Entities and Views
 
 *The GeoAPI exposes data in two ways: entities and views*
 
@@ -26,6 +26,10 @@ Views are collections of data about entities. The view data associated with a sp
 For a limited set of developers, we are offering the ability to have a custom writable view that allows you to associate data with entities. If you are interested in gaining access to a writable view, please [http://spreadsheets.google.com/viewform?formkey=dGJscE5kWmc1ZjVDUzFQUW8yMmdNa0E6MA submit your information] and we'll try to accommodate your request.
 
 The currently supported list of views are:
+  * [ViewListing listing]: Listing information for business entities
+  * [ViewUser custom user]: Userviews that provides each api key with its own namespace
+  * [ViewTwitter twitter]: Tweets in neighborhoods or close to business entities
+  * [ViewFlickr flickr]: Flickr photos in city, neighborhood or close to business entities
 
 =listing=
 
