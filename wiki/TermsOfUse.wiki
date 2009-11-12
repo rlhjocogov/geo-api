@@ -1,10 +1,10 @@
 #summary Plain English Terms of Use
 
-==Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the !TownMe GeoAPI brought to you by Mixer Labs, Inc.==
+==Plain Old Non-Legalese Non-Fancy-Shmancy English Version of License to the GeoAPI brought to you by Mixer Labs, Inc.==
 
 We are launching this alpha GeoAPI for use by the broader developer community.  We decided to open this API because we built it for our own purposes to run [http://www.townme.com/ TownMe] and kept getting requests from friends who were interested in using the data to do cool/interesting/crazy things.  
 
-There is some really exciting stuff happening right now in location based services and we want the community to benefit from the hard work we put into building our own geo-infrastructure.  We currently do not charge for the GeoAPI, run ads against it, or anything like that.  We have put a lot of time and effort into building this API, licensing or otherwise acquiring the data, and running the service.  As such we ask that you properly [Display_requirements attribute] !TownMe as the data source/service that powers location on your app if you use the API. 
+There is some really exciting stuff happening right now in location based services and we want the community to benefit from the hard work we put into building our own geo-infrastructure.  We currently do not charge for the GeoAPI, run ads against it, or anything like that.  We have put a lot of time and effort into building this API, licensing or otherwise acquiring the data, and running the service.  As such we ask that you properly [Display_requirements attribute] GeoAPI as the data source/service that powers location on your app if you use the API. 
 
 Basically our GeoAPI license agreement says:
   * You will only use the API according to the guidelines we provide for it
@@ -12,17 +12,17 @@ Basically our GeoAPI license agreement says:
   * Use this API at your own risk!  The API is still in alpha.  We may also change the structure of this API at any time at our discretion.  If we make changes we will update these pages so you know what is going on.
   * The data in the API is our intellectual property or that of our partners who provided it to us.  It is not yours and we are not granting you any broad license to use this data outside of the use of the API.
   * We can change the terms of our API at anytime – it is up to you to come back here to make sure the terms haven’t changed on you. 
-  * Make to properly attribute !TownMe for use of this API. [Display_requirements Display requirements can be found here]
+  * Make to properly attribute GeoAPI.com for use of this API. [Display_requirements Display requirements can be found here]
 
 We are also launching a “writable” portion of the API.  This API will let you write data for specific entities against the API.  The terms for the writable portion also include:
   * We believe in data portability – anything that you write against the API will be data we will let you extract easily (right now “easily” probably means you email us and we send you a CSV with your data – we still need to add a lot of features. :)
   * In order to help us improve the API as well as augment the set of locations available to the developer community via the API, data you write against the API is by default also licensed to us non-exclusively.  		
 
-The GeoAPI will initially be constrained to 20,000 queries per day.  If you need more then this feel free to email us at "api _at_ townme.com".
+The GeoAPI will initially be constrained to 20,000 queries per day.  If you need more then this feel free to email us at "api _at_ geoapi.com".
 
-If you have any questions about the GeoAPI pleacs contact "api _at_ townme _dot_ com"
+If you have any questions about the GeoAPI pleacs contact "api _at_ geoapi_dot_ com"
 
-As an FYI "Mixer Labs, Inc." is the company we incorporated as when we were still in stealth mode, while !TownMe is the site we work on.
+As an FYI "Mixer Labs, Inc." is the company we incorporated as when we were still in stealth mode, while GeoAPI.com is the site and brand for the GeoAPI.
 
 *Please be sure to read the full legal terms below, which you are bound by if you use the API.*
 
