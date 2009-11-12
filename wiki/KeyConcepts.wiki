@@ -27,6 +27,6 @@ For a limited set of developers, we are offering the ability to have a custom wr
 
 The currently supported list of views are:
   * [ViewListing listing]: Listing information for business entities
-  * [ViewUser custom user]: Userviews that provides each api key with its own namespace
+  * [ViewUser userview]: Userviews that provides each api key with its own namespace
   * [ViewTwitter twitter]: Tweets in neighborhoods or close to business entities
   * [ViewFlickr flickr]: Flickr photos in city, neighborhood or close to business entities
