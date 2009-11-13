@@ -215,7 +215,7 @@ function displayCheckins(status) {
 	    if (comments[i]) {
 		$("#results").append(
 		    '<tr><td class="poi">' +
-			'<a href="http://geoapi.com/v1/e/' + guid + '">' +
+			'<a href="http://www.geoapi.com/e/' + guid + '">' +
 			escapeHTML(name) + '</a></td><td class="comment">' +
 			escapeHTML(comments[i]) + '</td></tr>');
 	    }
