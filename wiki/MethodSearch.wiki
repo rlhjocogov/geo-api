@@ -4,9 +4,9 @@
 
 We currently support two styles of performing searches:
   * [http://code.google.com/p/geo-api/wiki/MethodSimpleSearch Simple Search]: Allows you to easily do a point/radius search for businesses and points of interest.
-  * [http://code.google.com/p/geo-api/wiki/MQLSearchMethod MQL Search]: Allows you to perform more complex queries, by constraining results based on various properties, including ones in views.
+  * [http://code.google.com/p/geo-api/wiki/MethodMQLSearch MQL Search]: Allows you to perform more complex queries, by constraining results based on various properties, including ones in views.
 
-*Note*: Both Simple Search and MQL search are accessed using the same url ({{{http://api.geoapi.com/v1/search}}}) - however, MQL search takes the search parameters in a single query parameter 'q' (i.e. {{{http://api.geoapi.com/v1/search?q=...}}}
+*Note*: Both Simple Search and MQL search are accessed using the same url ({{{http://api.geoapi.com/v1/search}}}) - however, MQL search takes the search parameters in a single query parameter 'q' (i.e. {{{http://api.geoapi.com/v1/q?q=...}}}
 
 ==Usage Notes==
 
