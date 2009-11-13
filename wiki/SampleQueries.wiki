@@ -15,3 +15,6 @@
 =Get Info From the "Listing" View of an Entity=
 
 [http://api.geoapi.com/v1/e/ritual-coffee-roasters-san-francisco-ca-94110/view/listing?apikey=demo&pretty=1]
+
+=Get Info About an Entity =
+[http://api.geoapi.com/v1/e/san-francisco-ca?apikey=demo&pretty=1]
