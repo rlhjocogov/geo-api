@@ -11,7 +11,7 @@ In our beta phase, we will be rolling out API keys progressively. If you would l
 
 =Rate Limiting=
 
-Be nice. Don't hammer our servers unnecessarily. If your app is taking off like a rocketship, please let us know and we can work something out. By default, each API Key is limited to 5,000 queries per day. If you come within striking distance of that, please email us at "api _at_ geoapi.com".
+If your app is taking off like a rocketship, please let us know and we are happy to adjust the query per day thresholds. By default, each API Key is limited to 20,000 queries per day. If you come within striking distance of that, email us at "api _at_ geoapi.com" and we can up your QPDs.
 
 
 =Terms of Use=
