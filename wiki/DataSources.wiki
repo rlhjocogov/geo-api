@@ -1,6 +1,6 @@
 = Data Sources Used by the GeoAPI =
 
-The !TownMe GeoAPI uses a variety of data sources.  A subset of sources require attribution and are listed below.  
+The !TownMe/Mixer Labs GeoAPI uses a variety of data sources.  A subset of sources require attribution and are listed below.  
 
 We have also done some pretty heavy duty cleaning of much of the data.  This does not mean the data is by any means perfect (in fact, much of it is still quite messy!)
 
