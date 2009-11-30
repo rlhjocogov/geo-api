@@ -15,6 +15,8 @@ If you see any errors, or have suggestions for good data sources to use, please 
   * [http://www.wikipedia.com Wikipedia POI]
   * [http://www.localeze.com Localeze business listing data]
   * [http://www.townme.com/about.html You can read more on the TownMe About Page]
+  * [http://www.twitter.com Twitter]
+  * [http://www.flickr.com Flickr]
   * Multiple other sources
 
 If you have suggestions for data you think should be added to the API, please contact us at "api _at_ geoapi_dot_ com"
