@@ -397,7 +397,7 @@ Below are several examples of MQL queries. Note that the queries are of the foll
         "listing-url":"http://www.ritualroasters.com",
         "name":"Ritual Coffee Roasters"
       },
-      "distance-from-center":"21m",
+      "distance-from-origin":"21m",
       "name":"Ritual Coffee Roasters",
       "views":["twitter",
         "listing"
