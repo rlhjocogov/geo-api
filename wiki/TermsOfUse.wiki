@@ -18,7 +18,7 @@ We are also launching a “writable” portion of the API.  This API will let yo
   * We believe in data portability – anything that you write against the API will be data we will let you extract easily (right now “easily” probably means you email us and we send you a CSV with your data – we still need to add a lot of features. :)
   * In order to help us improve the API as well as augment the set of locations available to the developer community via the API, data you write against the API is by default also licensed to us non-exclusively.  		
 
-The GeoAPI will initially be constrained to 20,000 queries per day.  If you need more then this feel free to email us at "api _at_ geoapi.com".
+The GeoAPI will initially be constrained to 20,000 queries per day.  If you need more then this feel free to email us at "api _at_ geoapi.com".  You can see pricing information here  [http://geoapi.com/pricing.html]  Basically we want to ensure we can cover our serving and licensing costs.
 
 If you have any questions about the GeoAPI pleacs contact "api _at_ geoapi_dot_ com"
 
