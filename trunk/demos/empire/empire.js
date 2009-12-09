@@ -22,6 +22,8 @@ var ENTITIES = [
     [ 'downtown-san-francisco-ca', "Downtown"],
     [ 'mission-san-francisco-ca', "Mission"],
     [ 'south-of-market-san-francisco-ca', "South Of Market"],
+    [ 'user-demo-ZqGELixR', "MGopolis"],
+    [ 'user-demo-wHaNqqCD', "Liz Lane"],
     [ 'user-demo-OaL7E9GP', "George's Gulch"],
     [ 'user-demo-juLu3vkf', "Marius's Manor"],
     [ 'user-demo-pkoqrqpA', "Othman's Obelisk"],
