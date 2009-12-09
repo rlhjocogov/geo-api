@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Create your own Twitter empire</title>
+    <link href="empire.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+	    src="http://www.google.com/jsapi?key=ABQIAAAAs9VkCpQBysM7j2yW_7mnGRQO1LnNr61Gx8B8kfIM3A1ABYtoLBTVAyC3fGV-8GbjkXtYwDTBlkctpA"></script>
+    <script type="text/javascript" src="http://json.org/json2.js"></script>
+    <script type="text/javascript" src="empire.js"></script>
+  </head>
+  <body onload="init()" onunload="GUnload()">
+    <h2 id="parents">Create your own Twitter empire</h2>
+    <table>
+      <tr><td valign="top">
+	    <div id="map_canvas" style="width: 400px; height: 300px"></div>
+	</td><td valign="top">
+	    <table class="entities" id="entities"></table>
+	</td><td valign="top">
+	    Recently created:<br>
+	    <table class="entities" id="recent_entities"></table>
+      </td></tr>
+    </table>
+	  <div style="width: 700px">
+	    <form onsubmit="return false">
+	      <input id="apikey" name="apikey" type="hidden" value="demo">
+	      <input id="lat" name="lat" type="hidden" size="16" value="37.78">
+	      <input id="lon" name="lon" type="hidden" size="16" value="-122.45">
+	      <div class="add_entities" id="add_entities">&nbsp;</div>
+	    </form>
+	    <div class="instructions">
+	      <ol>
+		<li>Click on one spot on the map to create a point of
+		  interest <b>or</b> click on a few places on the map to
+		  create a polygon.</li>
+		<li>Enter a name for your new place and click "Add place".
+		<li>You can now see all the tweets associated with your
+		  new place.  You can also click on other people's places
+		  (on the right) to see tweets from their places.</li>
+	      </ol>
+	    </div>
+	    <div id="status">&nbsp;</div>
+	    <table id="results"></table>
+	  </div>
+  </body>
+</html>

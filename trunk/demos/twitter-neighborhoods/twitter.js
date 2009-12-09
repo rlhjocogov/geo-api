@@ -13,6 +13,12 @@ google.load("maps", "2.x");
 google.load("jquery", "1.3.1");
 
 var NEIGHBORHOODS = [
+    [ 'san-mateo-ca', "San Mateo"],
+    [ 'palo-alto-ca', "Palo Alto"],
+    [ 'new-york-ny', "New York"],
+    [ 'hollywood-los-angeles-ca', "Hollywood"],
+    [ 'los-angeles-ca', "Los Angeles"],
+    [ 'san-francisco-ca', "San Francisco"],
     [ 'castro-upper-market-san-francisco-ca', "Castro-Upper Market"],
     [ 'downtown-san-francisco-ca', "Downtown"],
     [ 'financial-district-san-francisco-ca', "Financial District"],
@@ -97,7 +103,7 @@ function requestTweetsForCurrentNeighborhood() {
     _listings = [];
     _apikey = $("#apikey").val();
 
-    $.getJSON("http://api.geoapi.com/v1/e/" + escape(_guid) +
+    $.getJSON("http://localhost:8080/e/" + escape(_guid) +
 	      "/view/twitter?apikey=" + escape(_apikey) +
 	      "&jsoncallback=?",
 	      showTweets);
