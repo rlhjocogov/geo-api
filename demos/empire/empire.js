@@ -91,6 +91,10 @@ function initRecentEntities() {
             '"><a class="entity" href="#" onclick="getEntity(\'' +
 	    guid + '\')">' + escapeHTML(name) + '</a></td></tr>');
     }
+    $("#recent_entities").append(
+	'<tr><td class="' + tdClass +
+            '"><a class="entity" href="show_all.html">' +
+	    '<b>See more &raquo;</b></a></td></tr>');
 }
 
 // Parses JSON data about recently created entities and displays them.

@@ -40,6 +40,10 @@ function init() {
 // Displays the list of recent user-created entities.
 function initRecentEntities() {
     $("#recent_entities").empty();
+    $("#recent_entities").append(
+	'<tr><td class="' + tdClass +
+            '"><a class="entity" href="index.html">' +
+	    '<b>Add your own place &raquo;</b></a></td></tr>');
     for (var i = 0;
 	 i < recent_entities.length && i < MAX_RECENT_ENTITIES;
 	 ++i) {
