@@ -1,0 +1,8 @@
+2009-11-12
+
+  * Initial iPhone SDK 1.0 release.
+
+2009-12-15 
+
+  Version 1.0.1
+  * Classes/GAPlace.m: Fixed bug in place coordinates parsing. 
