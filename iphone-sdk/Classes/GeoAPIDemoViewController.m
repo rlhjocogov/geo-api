@@ -29,6 +29,7 @@ NSString *const kGoodNonCoffeehouseRestaurantsQuery =
   "   \"radius\": \"0.2km\","
   "   \"entity\": [{"
   "     \"guid\": null,"
+  "     \"geom\": null,"
   "     \"type\": \"business\","
   "     \"view.listing\": {"
   "       \"verticals\": \"restaurants\","
@@ -129,8 +130,12 @@ NSString *const kGoodNonCoffeehouseRestaurantsQuery =
     [outputRows addObject:@"\n* Good non-coffeehouse restaurants:"];
     for (GAPlace *place in [GAPlace placesWithJSON:responseString]) {
       NSNumber *rating = [place.listing objectForKey:@"web-wide-rating"];
-      [outputRows addObject:[NSString stringWithFormat:@"%@ (rating: %@)", 
-                                                       place.name, rating]];
+      [outputRows addObject:[NSString stringWithFormat:
+                             @"%@ (%.4f, %.4f) (rating: %@)", 
+                             place.name,
+                             place.coords.latitude,
+                             place.coords.longitude,
+                             rating]];
     }
   }
   textView_.text = [outputRows componentsJoinedByString:@"\n"];
