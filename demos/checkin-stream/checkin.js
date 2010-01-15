@@ -83,12 +83,14 @@ function updateParents(data) {
     var parentNames = "";
     // The API returns parents from most to least specific.
     for (var i = parents.length - 1; i >= 0; --i) {
-	var parent = parents[i]['meta']['name'];
-	if (parent) {
-	    parentNames += parent;
-	}
-	if (i > 0) {
-	    parentNames += " - ";
+	var parentName = parents[i]['meta']['name'];
+	var parentType = parents[i]['meta']['type'];
+	if (parentName && (parentType == 'city' ||
+			   parentType == 'neighborhood')) {
+	    if (parentNames.length > 0) {
+		parentNames += " - ";
+	    }
+	    parentNames += parentName;
 	}
     }
     updateHeader(parentNames);
