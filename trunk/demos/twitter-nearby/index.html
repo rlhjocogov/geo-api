@@ -143,7 +143,12 @@
                     line += result.meta.name
                     if (result.parents) {
                         for (var i=0; i < result.parents.length; i=i+1) {
-                            line += ' > ' + result.parents[i].name;
+							var parentName = result.parents[i]['name'];
+							var parentType = result.parents[i]['type'];
+							if (parentName && (parentType == 'city' ||
+								parentType == 'neighborhood')) {
+                            	line += ' > ' + parentName;
+							}
                         }
                     }
                     line += "</div></div>"
